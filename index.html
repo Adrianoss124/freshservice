@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>TechService - Usługi</title>
+    <style>
+        :root {
+            --primary-color: #df2919;
+            --dark-bg: #1a1a1a;
+            --light-text: #ffffff;
+            --card-bg: #252525;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform var(--transition);
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(223, 41, 25, 0.2);
+        }
+
+        .service-icon {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            transition: transform var(--transition);
+        }
+
+        .card:hover .service-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .content p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background var(--transition);
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background: #c22417;
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Karta 1 - Zleć naprawę -->
+        <div class="card">
+            <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+            </div>
+            <div class="content">
+                <h2>Zleć naprawę</h2>
+                <p>Szybka i profesjonalna pomoc</p>
+                <a href="/zlec/zlec.html" class="btn">
+                    <span>Zgłoś usterkę</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Karta 2 - Cennik -->
+        <div class="card">
+            <div class="service-icon">
+                <i class="fas fa-euro-sign"></i>
+            </div>
+            <div class="content">
+                <h2>Cennik</h2>
+                <p>Przejrzyste zasady wyceny usług</p>
+                <a href="/cennik/cennik.html" class="btn">
+                    <span>Więcej</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+            <!-- Karta 3 - Projekty -->
+        <div class="card">
+            <div class="service-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="content">
+                <h2>Projekty</h2>
+                <p>Kompleksowe rozwiązania technologiczne</p>
+                <a href="/usługi/uslugi.html" class="btn">
+                    <span>Więcej</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Karta 4 - O firmie -->
+        <div class="card">
+            <div class="service-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="content">
+                <h2>O firmie</h2>
+                <p>Dowiedz się więcej o naszej firmie i doświadczeniu.</p>
+                <a href="onas/onas.html" class="btn">
+                    <span>Więcej</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+</html>

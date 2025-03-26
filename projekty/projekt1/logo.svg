@@ -1,0 +1,6 @@
+<!-- logo.svg -->
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 80V20L50 50L80 20V80" stroke="#1A365D" stroke-width="3"/>
+  <path d="M120 50H150V80H120V50ZM120 20H150V30H120V20Z" fill="#1A365D"/>
+  <text x="180" y="70" font-family="Arial" font-size="40" fill="#1A365D">BUDMATEX</text>
+</svg>
