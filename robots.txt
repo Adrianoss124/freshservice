@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://twojanazwa.github.io/sitemap.xml
