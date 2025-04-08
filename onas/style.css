@@ -1,112 +1,120 @@
+/* =========================== */
+/*        Zmienne CSS          */
+/* =========================== */
 :root {
-    --primary-color: #df2919;
-    --dark-bg: #1a1a1a;
-    --light-text: #ffffff;
-    --dark-text: #2b2b2b;
-    --accent: #df2919;
-    --transition: 0.3s ease;
-    --section-padding: 4rem 0;
+  --primary: #df2919; /* Główny kolor akcentu (czerwony) */
+  --accent: #2dc6f5; /* Drugorzędny kolor akcentu (niebieski) */
+  --dark-bg: #1a1a1a; /* Tło strony */
+  --light-text: #ffffff; /* Jasny tekst */
+  --card-bg: #252525; /* Tło kart i sekcji */
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Płynna animacja */
+  --header-height: 80px; /* Wysokość nagłówka */
+  --shadow: 0 10px 30px rgba(223, 41, 25, 0.2); /* Cień przy hover */
+}
+
+/* =========================== */
+/*       Reset i Globalne      */
+/* =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-    font-family: 'Manrope', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background: var(--dark-bg);
+  color: var(--light-text);
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* =========================== */
+/*          Nagłówek           */
+/* =========================== */
 .header {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--header-height);
+  z-index: 1000;
+  border-bottom: 2px solid var(--primary);
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--light-text);
-    text-decoration: none;
+.logo-img {
+  height: 40px;
+  transition: transform var(--transition);
+  animation: float 3s ease-in-out infinite;
 }
 
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Nawigacja */
 .nav-links {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2.5rem;
 }
 
 .nav-link {
-    color: var(--light-text);
-    text-decoration: none;
-    position: relative;
-    padding: 0.5rem 0;
-    transition: var(--transition);
+  color: var(--light-text);
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color var(--transition);
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: var(--transition);
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width var(--transition);
 }
 
-.nav-link:hover::after {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+.nav-link:hover {
+  color: var(--accent);
 }
 
-.about-section {
-    padding: var(--section-padding);
-    max-width: 1200px;
-    margin: 6rem auto 0;
+.nav-link.active {
+  color: var(--accent);
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-}
-/* Style dla hamburger menu */
+/* Hamburger dla mobilnych */
 .hamburger {
   display: none;
-  padding: 10px;
   cursor: pointer;
   background: none;
   border: none;
+  padding: 10px;
   z-index: 1001;
 }
 
@@ -120,23 +128,23 @@ body {
 .hamburger-inner {
   width: 100%;
   height: 2px;
-  background-color: var(--light-text);
+  background: var(--light-text);
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform var(--transition), opacity var(--transition);
 }
 
 .hamburger-inner::before,
 .hamburger-inner::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
-  background-color: var(--light-text);
+  background: var(--light-text);
   position: absolute;
   left: 0;
-  transition: transform 0.3s;
+  transition: transform var(--transition);
 }
 
 .hamburger-inner::before {
@@ -147,44 +155,294 @@ body {
   top: 8px;
 }
 
-/* Animacja przy aktywacji */
 .hamburger.active .hamburger-inner {
   transform: rotate(45deg);
 }
 
 .hamburger.active .hamburger-inner::before {
-  transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-90deg);
 }
 
 .hamburger.active .hamburger-inner::after {
   opacity: 0;
 }
 
-/* Responsywność - mobile */
+/* Overlay dla menu mobilnego */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility 0s linear 0.3s;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition);
+}
+
+/* =========================== */
+/*         Sekcja O nas        */
+/* =========================== */
+.about-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: calc(var(--header-height) + 2rem) auto 0;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.about-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.about-container {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-text {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.feature-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary);
+  transition: transform var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.feature-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.about-image {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.about-image:hover .about-img {
+  transform: scale(1.05);
+}
+
+/* =========================== */
+/*         Stopka              */
+/* =========================== */
+.footer {
+  background: var(--card-bg);
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+/* =========================== */
+/*        Responsywność        */
+/* =========================== */
+@media (max-width: 1024px) {
+  .about-section {
+      padding: 3rem 1rem;
+  }
+
+  .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .section-title {
+      font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+      display: block;
   }
 
   .nav-links {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    padding: 2rem;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(10px);
+      position: fixed;
+      top: var(--header-height);
+      right: -100%;
+      width: 100%;
+      max-width: 300px;
+      height: calc(100vh - var(--header-height));
+      background: rgba(26, 26, 26, 0.95);
+      flex-direction: column;
+      padding: 2rem;
+      transition: right var(--transition);
+      z-index: 999;
   }
 
   .nav-links.active {
-    right: 0;
+      right: 0;
   }
 
   .nav-link {
-    padding: 1rem 0;
-    font-size: 1.2rem;
+      padding: 1rem 0;
+      font-size: 1.2rem;
   }
+
+  .about-section {
+      padding: 2rem 1rem;
+  }
+
+  .features-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .section-title {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+      padding: 0 1rem;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+  }
+
+  .about-section {
+      padding: 1.5rem 0.5rem;
+  }
+
+  .about-container {
+      padding: 1rem;
+  }
+
+  .feature-card {
+      padding: 0.8rem;
+  }
+
+  .feature-card h3 {
+      font-size: 1.1rem;
+  }
+
+  .feature-card p {
+      font-size: 0.85rem;
+  }
+
+  .section-title {
+      font-size: 1.3rem;
+  }
+}
+body.no-scroll {
+  overflow: hidden;
+}
+.feature-card.touch-hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+body.no-scroll {
+  overflow: hidden;
+}
+.nav-links {
+  transition: right 0.3s ease; /* lub transform, w zależności od CSS */
+}
+.nav-links.active {
+  right: 0; /* lub transform: translateX(0) */
+}
+.menu-overlay {
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }

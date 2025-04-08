@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usługi - TechService</title>
+    <title>Cennik - TechService</title>
+<meta name="description" content="Poznaj ceny usług TechService – instalacja Windows, optymalizacja, czyszczenie i więcej.">
+<meta name="keywords" content="cennik, ceny usług komputerowych, TechService">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
-          <a href="/" class="logo">
-            <img src="logo.png" alt="TechService Logo" class="logo-img">
-          </a>
-          
-          <!-- Przycisk hamburger -->
-          <button class="hamburger" aria-label="Menu">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-      
-          <!-- Menu nawigacyjne -->
-          <div class="nav-links">
-            <a href="/" class="nav-link">Strona Główna</a>
-            <a href="/onas/onas.html" class="nav-link">O Nas</a>
-            <a href="/usługi/uslugi.html" class="nav-link active">Projekty</a>
-            <a href="/zlec/zlec.html" class="nav-link contact-link">Zleć Naprawę</a>
-          </div>
+            <a href="/" class="logo">
+                <img src="../img/logo.png" alt="TechService Logo" class="logo-img">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="../index.html" class="nav-link active">Strona Główna</a>
+                <a href="../onas/onas.html" class="nav-link">O Nas</a>
+                <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
+                <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="../zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
+            </div>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </nav>
-      </header>
-
+    </header>
+    <!-- Dodany overlay dla menu mobilnego -->
+    <div class="menu-overlay"></div>
     <section class="pricing-section">
+        <div class="filter-container">
+            <button id="sortPrice">Sortuj po cenie</button>
+            <button id="resetFilter">Resetuj</button>
+        </div>
         <div class="pricing-container">
             <h2 class="section-title">Nasz cennik</h2>
-            
             <div class="table-wrapper">
                 <table class="pricing-table">
                     <thead>
@@ -83,6 +87,11 @@
             </div>
         </div>
     </section>
-<script src="/hamburger.js"></script>
+    <footer class="footer">
+        <p>© 2025 TechService. Wszelkie prawa zastrzeżone.</p>
+        <p>Kontakt: email@example.com | Tel: 123-456-789</p>
+    </footer>
+    <script src="/hamburger.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

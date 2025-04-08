@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekty - TechService</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+        <a href="/" class="logo">
+            <img src="img/logo.png" alt="TechService Logo" class="logo-img">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="../index.html" class="nav-link active">Strona Główna</a>
+            <a href="../onas/onas.html" class="nav-link">O Nas</a>
+            <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
+            <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
+            <a href="../zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
+        </div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </nav>
+</header>
+  <div class="menu-overlay"></div>
+  <main>
+    <section class="projects-section">
+      <h2 class="section-title">Nasze Projekty</h2>
+      <div class="projects-container">
+        <!-- Projekt 1 -->
+        <div class="project-item">
+          <div class="project-link">
+            <a href="/projekty/projekt1/index.html" target="_blank">
+              <h3>Projekt 1: Strona Firmowa</h3>
+            </a>
+          </div>
+          <div class="project-features">
+            <ul>
+              <li><i class="fas fa-check"></i> HTML5 &amp; CSS3</li>
+              <li><i class="fas fa-check"></i> JavaScript</li>
+              <li><i class="fas fa-check"></i> PHP</li>
+              <li><i class="fas fa-check"></i> Łączność z bazą danych</li>
+              <li><i class="fas fa-check"></i> Formularz rejestracji</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projekt 2 -->
+        <div class="project-item">
+          <div class="project-link">
+            <a href="https://example2.com" target="_blank">
+              <h3>Projekt 2: Sklep Internetowy</h3>
+            </a>
+          </div>
+          <div class="project-features">
+            <ul>
+              <li><i class="fas fa-check"></i> Responsywny design</li>
+              <li><i class="fas fa-check"></i> Integracja z systemem płatności</li>
+              <li><i class="fas fa-check"></i> System zarządzania treścią</li>
+              <li><i class="fas fa-check"></i> Bezpieczeństwo danych</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<footer class="footer">
+  <p>&copy; 2025 TechService. Wszelkie prawa zastrzeżone.</p>
+  <p>Kontakt: email@example.com | Tel: 123-456-789</p>
+</footer>
+  <script src="script.js"></script>
+  <script src="/hamburger.js"></script>
+</body>
+</html>

@@ -16,26 +16,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <img src="img/logo.png" alt="BUDMATEX Logo" class="logo-img">
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="img/logo.png" alt="TechService Logo" class="logo-img">
             </a>
-            
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Strona Główna</a></li>
-                <li><a href="#about" class="nav-link">O Firmie</a></li>
-                <li><a href="#products" class="nav-link">Produkty</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-                <li><a href="#registration" class="btn btn-primary nav-cta">Rejestracja</a></li>
-            </ul>
-            
-            <div class="mobile-menu">
-                <i class="fas fa-bars menu-icon"></i>
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link active">Strona Główna</a>
+                <a href="onas/onas.html" class="nav-link">O Nas</a>
+                <a href="projekty/index.html" class="nav-link">Projekty</a>
+                <a href="cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
             </div>
-        </div>
-    </nav>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">

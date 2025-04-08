@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>TechService - Usługi</title>
+    <meta name="description" content="TechService oferuje profesjonalną naprawę, optymalizację i składanie komputerów. Sprawdź naszą ofertę!">
+<meta name="keywords" content="serwis komputerowy, naprawa, optymalizacja, TechService">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,107 +18,12 @@
 
   gtag('config', 'G-1PK6BMVN9X');
 </script>
-    <title>TechService - Usługi</title>
-    <style>
-        :root {
-            --primary-color: #df2919;
-            --dark-bg: #1a1a1a;
-            --light-text: #ffffff;
-            --card-bg: #252525;
-            --transition: 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: var(--dark-bg);
-            color: var(--light-text);
-            line-height: 1.6;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: transform var(--transition);
-            border: 1px solid #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(223, 41, 25, 0.2);
-        }
-
-        .service-icon {
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            transition: transform var(--transition);
-        }
-
-        .card:hover .service-icon {
-            transform: rotate(15deg) scale(1.1);
-        }
-
-        .content h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .content p {
-            color: #aaa;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background var(--transition);
-            margin-top: auto;
-        }
-
-        .btn:hover {
-            background: #c22417;
-            transform: translateX(5px);
-        }
-
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-                margin: 2rem auto;
-            }
-        }
-    </style>
 </head>
 <body>
+    <section class="hero">
+        <h1>Witaj w <span>TechService</span></h1>
+        <p>Profesjonalny serwis komputerowy z pasją do technologii</p>
+    </section>
     <main>
         <!-- Karta 1 - Zleć naprawę -->
         <div class="card">
@@ -151,7 +61,7 @@
             <div class="content">
                 <h2>Projekty</h2>
                 <p>Kompleksowe rozwiązania technologiczne</p>
-                <a href="usługi/uslugi.html" class="btn">
+                <a href="projekt/uslugi.html" class="btn">
                     <span>Więcej</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
@@ -174,5 +84,11 @@
 
 
     </main>
+    <footer class="footer">
+        <p>© 2025 TechService. Wszelkie prawa zastrzeżone.</p>
+        <p>Kontakt: email@example.com | Tel: 123-456-789</p>
+    </footer>
+<script src="script.js"></script>
+<script src="hamburger.js"></script>
 </body>
 </html>
