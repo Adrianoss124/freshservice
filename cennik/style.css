@@ -28,7 +28,26 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+.btn:hover::after {
+  width: 200%;
+  height: 200%;
+}
 /* =========================== */
 /*          Nagłówek           */
 /* =========================== */

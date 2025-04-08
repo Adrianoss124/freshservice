@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://adrianoss124.github.io/freshservice</loc>
+        <loc>https://adrianoss124.github.io/freshservice/index.html</loc>
         <lastmod>2025-04-08</lastmod>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://adrianoss124.github.io/freshservice/zlec/zlec.html</loc>
+        <lastmod>2025-04-08</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://adrianoss124.github.io/freshservice/cennik/cennik.html</loc>
@@ -11,7 +16,12 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://adrianoss124.github.io/freshservice/zlec/zlec.html</loc>
+        <loc>https://adrianoss124.github.io/freshservice/onas/onas.html</loc>
+        <lastmod>2025-04-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://adrianoss124.github.io/freshservice/projekt/uslugi.html</loc>
         <lastmod>2025-04-08</lastmod>
         <priority>0.8</priority>
     </url>
