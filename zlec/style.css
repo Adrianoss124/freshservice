@@ -522,3 +522,9 @@ label a {
   color: var(--accent);
   text-decoration: underline;
 }
+.form-info {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.4;
+}

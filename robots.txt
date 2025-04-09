@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /private/
 Allow: /
-Disallow: /admin/  # 
+
 Sitemap: https://adrianoss124.github.io/freshservice/sitemap.xml

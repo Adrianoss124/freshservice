@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinie Klientów – TechService Stare Ratowo</title>
+    <meta name="description" content="Opinie o TechService – serwis komputerowy w Starym Ratowie, Łomża, Kolno, Ostrołęka. Sprawdź, co mówią klienci!">
+    <meta name="keywords" content="opinie TechService, serwis komputerowy Stare Ratowo, naprawa PC Łomża, TechService Ostrołęka">
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/reviews.html">
+    <meta property="og:title" content="Opinie Klientów – TechService Stare Ratowo">
+    <meta property="og:description" content="Opinie o TechService – Twój serwis komputerowy w Starym Ratowie i okolicach.">
+    <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
+    <meta property="og:url" content="https://adrianoss124.github.io/freshservice/reviews.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TechService – Adrian Krajewski",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Stare Ratowo 9a",
+            "addressLocality": "Stare Ratowo",
+            "addressRegion": "Śniadowo",
+            "postalCode": "18-411",
+            "addressCountry": "PL"
+        },
+        "telephone": "+48790780003",
+        "review": [
+            {
+                "@type": "Review",
+                "author": "Jan Kowalski",
+                "reviewBody": "Szybka i profesjonalna naprawa mojego laptopa. Polecam TechService!",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "author": "Anna Nowak",
+                "reviewBody": "Świetna obsługa i przystępne ceny. Komputer działa jak nowy!",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                }
+            }
+        ]
+    }
+    </script>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" href="reviews.css">
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/freshservice/index.html" class="logo">
+                <img src="img/logo.webp" alt="TechService Logo" class="logo-img" loading="lazy">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="/freshservice/index.html" class="nav-link">Strona Główna</a>
+                <a href="onas/onas.html" class="nav-link">O Nas</a>
+                <a href="projekt/uslugi.html" class="nav-link">Projekty</a>
+                <a href="cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </div>
+            <button class="hamburger" aria-label="Otwórz menu mobilne" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-inner"></span>
+            </button>
+            <button class="theme-toggle" aria-label="Zmień motyw"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+    <div class="menu-overlay"></div>
+    <nav class="breadcrumbs">
+        <a href="/freshservice/index.html">Strona Główna</a> > <span>Opinie Klientów</span>
+    </nav>
+    <main class="container">
+        <h1>Opinie Klientów o TechService</h1>
+        <p>Sprawdź, co mówią o nas klienci z Starego Ratowa, Łomży, Kolna i Ostrołęki.</p>
+        <section class="reviews">
+            <div class="review-card card">
+                <h2>Jan Kowalski</h2>
+                <p>"Szybka i profesjonalna naprawa mojego laptopa. TechService w Starym Ratowie to najlepszy wybór!"</p>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="review-card card">
+                <h2>Anna Nowak</h2>
+                <p>"Świetna obsługa i przystępne ceny w Łomży. Mój komputer działa jak nowy!"</p>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="review-card card">
+                <h2>Piotr Wiśniewski</h2>
+                <p>"Zleciłem składanie PC w Ostrołęce – sprzęt działa idealnie. Polecam!"</p>
+                <div class="rating">★★★★★</div>
+            </div>
+        </section>
+        <p>Chcesz podzielić się opinią? Napisz na <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a>.</p>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="hamburger.js"></script>
+    <style>
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .review-card h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        .rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</body>
+</html>

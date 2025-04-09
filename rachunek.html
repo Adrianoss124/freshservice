@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachunek – TechService Stare Ratowo</title>
+    <meta name="description" content="Rachunek TechService – dokument dla usług w Starym Ratowie, Łomża, Kolno, Ostrołęka.">
+    <meta name="keywords" content="rachunek TechService, działalność nierejestrowana, Stare Ratowo">
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/rachunek.html">
+    <meta property="og:title" content="Rachunek – TechService Stare Ratowo">
+    <meta property="og:description" content="Rachunek TechService – przykład dokumentu dla usług w Starym Ratowie.">
+    <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
+    <meta property="og:url" content="https://adrianoss124.github.io/freshservice/rachunek.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" href="rachunek.css">
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/freshservice/index.html" class="logo">
+                <img src="img/logo.webp" alt="TechService Logo" class="logo-img" loading="lazy">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="/freshservice/index.html" class="nav-link">Strona Główna</a>
+                <a href="onas/onas.html" class="nav-link">O Nas</a>
+                <a href="projekt/uslugi.html" class="nav-link">Projekty</a>
+                <a href="cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </div>
+            <button class="hamburger" aria-label="Otwórz menu mobilne" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-inner"></span>
+            </button>
+            <button class="theme-toggle" aria-label="Zmień motyw"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+    <div class="menu-overlay"></div>
+    <nav class="breadcrumbs">
+        <a href="/freshservice/index.html">Strona Główna</a> > <span>Rachunek</span>
+    </nav>
+    <main class="container">
+        <h1>Rachunek – TechService</h1>
+        <p>Poniżej znajdziesz przykładowy szablon rachunku dla naszych usług w Starym Ratowie i okolicach.</p>
+        <section class="invoice">
+            <h2>Rachunek nr 1/2025</h2>
+            <p><strong>Wystawca:</strong> Adrian Krajewski, działalność nierejestrowana<br>
+               Stare Ratowo 9a, 18-411 Śniadowo<br>
+               Tel: 790 780 003, email: akrajewski2929@gmail.com</p>
+            <p><strong>Nabywca:</strong> [Imię i Nazwisko Klienta]</p>
+            <p><strong>Data wystawienia:</strong> 08.04.2025</p>
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Opis</th>
+                        <th>Kwota (PLN)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Naprawa komputera</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Razem:</td>
+                        <td>100 PLN</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p><strong>Płatność:</strong> Gotówka/Przelew na konto: [numer konta]</p>
+        </section>
+        <p>Potrzebujesz rachunku? Skontaktuj się z nami po wykonaniu usługi na <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a>.</p>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="hamburger.js"></script>
+    <style>
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .invoice-table th, .invoice-table td {
+            padding: 1rem;
+            border: 1px solid #333;
+            text-align: left;
+        }
+        body.light .invoice-table th, body.light .invoice-table td {
+            border: 1px solid #ddd;
+        }
+        .invoice-table th {
+            background: var(--primary);
+            color: var(--light-text);
+        }
+        .invoice-table tfoot td {
+            font-weight: 700;
+        }
+    </style>
+</body>
+</html>
