@@ -511,3 +511,36 @@ body.no-scroll {
 .footer a:hover {
   color: var(--primary);
 }
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #252525;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 400px; /* Ograniczenie szerokości dla czytelności */
+  z-index: 1000; /* Wysoki z-index, aby był na wierzchu */
+  display: none; /* Domyślnie ukryty */
+}
+
+.cookie-banner a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.cookie-banner .btn {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background: #df2919;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cookie-banner .btn:nth-child(2) {
+  background: #666;
+  margin-left: 10px;
+}

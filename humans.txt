@@ -1,0 +1,12 @@
+/* TEAM */
+Creator: Adrian (adrianoss124)
+Contact: akrajewski2929@gmail.com
+Location: Polska
+
+/* THANKS */
+Tools: GitHub Pages, VS Code, xAI Grok
+
+/* SITE */
+Last update: 2025-04-08
+Standards: HTML5, CSS3, JS
+Hosting: GitHub Pages

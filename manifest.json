@@ -1,0 +1,21 @@
+{
+    "name": "TechService",
+    "short_name": "TechService",
+    "description": "Profesjonalna naprawa, optymalizacja i składanie komputerów.",
+    "start_url": "/freshservice/index.html",
+    "display": "standalone",
+    "background_color": "#252525",
+    "theme_color": "#df2919",
+    "icons": [
+        {
+            "src": "/freshservice/img/logo-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/freshservice/img/logo-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

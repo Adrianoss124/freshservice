@@ -28,6 +28,9 @@
 <meta name="keywords" content="zleć naprawę, formularz, TechService">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/freshservice/manifest.json">
+    <link rel="icon" type="image/x-icon" href="/freshservice/favicon.ico">
+<link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
 </head>
 <body>
     <header class="header">
@@ -41,7 +44,6 @@
                 <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
                 <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
                 <a href="../zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
-                <button class="theme-toggle" aria-label="Zmień motyw"><i class="fas fa-moon"></i></button>
             </div>
             <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-box">
@@ -88,6 +90,9 @@
                     <label for="description">Opis problemu:</label>
                     <textarea id="description" name="message" class="form-input" rows="5" required></textarea>
                 </div>
+                <label>
+                    <input type="checkbox" name="consent" required> Wyrażam zgodę na przetwarzanie moich danych osobowych przez Adriana Krajewskiego w celu realizacji usługi zgodnie z <a href="../main/privacy.html">Polityką Prywatności</a>.
+                </label>
                 <input type="hidden" name="_subject" value="Nowe zgłoszenie naprawy">
                 <input type="hidden" name="_language" value="pl">
                 <div class="form-group">
@@ -105,10 +110,10 @@
         </div>
     </section>
     <footer class="footer">
-        <p>© 2025 TechService. Wszelkie prawa zastrzeżone.</p>
-        <p>Kontakt: akrajewski2929@gmail.com | Tel: 790-780-003</p>
+        <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszelkie prawa zastrzeżone. | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a></p>
     </footer>
     <script src="../hamburger.js"></script>
     <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

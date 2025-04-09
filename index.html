@@ -29,6 +29,9 @@
     <title>TechService - Usługi</title>
     <meta name="description" content="TechService oferuje profesjonalną naprawę, optymalizację i składanie komputerów. Sprawdź naszą ofertę!">
 <meta name="keywords" content="serwis komputerowy, naprawa, optymalizacja, TechService">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/x-icon" href="/freshservice/favicon.ico">
+<link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
 <script>
@@ -38,6 +41,7 @@
 
   gtag('config', 'G-1PK6BMVN9X');
 </script>
+<link rel="author" href="humans.txt">
 </head>
 <body>
     <section class="hero">
@@ -104,10 +108,48 @@
 
 
     </main>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Używamy cookies (np. Google Analytics) do analizy ruchu. Klikając "Akceptuję", zgadzasz się na ich użycie. <a href="privacy.html">Polityka Prywatności</a>.</p>
+        <button id="accept-cookies" class="btn">Akceptuję</button>
+        <button id="reject-cookies" class="btn">Odrzuć</button>
+    </div>
+    <script>
+        // Funkcja sprawdzająca stan cookies
+        function checkCookies() {
+            const banner = document.getElementById('cookie-banner');
+            if (!localStorage.getItem('cookies-accepted')) {
+                banner.style.display = 'block'; // Pokazujemy, jeśli nie ma zgody
+            } else {
+                banner.style.display = 'none'; // Ukrywamy, jeśli jest zgoda lub odrzucenie
+            }
+        }
+    
+        // Wykonujemy natychmiast po załadowaniu DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            checkCookies();
+        });
+    
+        // Obsługa przycisków
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    
+        document.getElementById('reject-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'rejected');
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
     <footer class="footer">
-        <p>© 2025 TechService. Wszelkie prawa zastrzeżone.</p>
-        <p>Kontakt: email@example.com | Tel: 123-456-789</p>
+        <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszelkie prawa zastrzeżone. | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a></p>
     </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
 <script src="script.js"></script>
 <script src="hamburger.js"></script>
 </body>

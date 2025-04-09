@@ -515,3 +515,10 @@ textarea.form-input {
   border-radius: 5px;
   cursor: pointer;
 }
+label input[type="checkbox"] {
+  margin-right: 10px;
+}
+label a {
+  color: var(--accent);
+  text-decoration: underline;
+}
