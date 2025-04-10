@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://adrianoss124.github.io/freshservice/</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+  </url>
+    <url>
         <loc>https://adrianoss124.github.io/freshservice/index.html</loc>
         <lastmod>2025-04-08</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,4 +66,10 @@
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://adrianoss124.github.io/freshservice/blog</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+  </url>
 </urlset>
