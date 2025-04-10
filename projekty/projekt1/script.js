@@ -1,79 +1,94 @@
-// main.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu
-    const mobileMenu = document.querySelector('.mobile-menu');
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicjalizacja AOS (animacje)
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-out-back'
+    });
+
+    // Menu mobilne
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    mobileMenu.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
-    // Smooth Scroll
+    // Płynne przewijanie
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(anchor.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
             }
         });
     });
 
-    // Registration Modal
+    // Modal rejestracji
     const modal = document.getElementById('registrationModal');
-    const openModalBtns = document.querySelectorAll('[href="#registration"]');
+    const openModalBtn = document.querySelector('.nav-cta');
     const closeModal = document.querySelector('.close-modal');
 
-    openModalBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            modal.style.display = 'block';
-        });
+    openModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
     });
 
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
     });
 
-    window.onclick = (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
 
-    // Form Submission
+    // Obsługa formularzy
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             Swal.fire({
-                title: 'Sukces!',
-                text: 'Formularz został wysłany pomyślnie',
+                title: 'Wysłano!',
+                text: 'Twoja wiadomość została pomyślnie przesłana.',
                 icon: 'success',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                customClass: { confirmButton: 'btn btn-primary' }
             });
             form.reset();
-            if(form.id === 'registrationForm') modal.style.display = 'none';
+            if (form.id === 'registrationForm') modal.style.display = 'none';
         });
     });
 
-    // Scroll Animation
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+    // Interaktywne przyciski specyfikacji
+    const specButtons = document.querySelectorAll('.product-btn');
+    specButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const specType = btn.getAttribute('data-spec');
+            Swal.fire({
+                title: `Specyfikacja: ${specType.charAt(0).toUpperCase() + specType.slice(1)}`,
+                text: `Szczegółowe informacje o produkcie "${specType}" dostępne po kontakcie z nami.`,
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Skontaktuj się',
+                cancelButtonText: 'Zamknij',
+                customClass: { confirmButton: 'btn btn-primary', cancelButton: 'btn btn-outline' }
+            }).then(result => {
+                if (result.isConfirmed) window.location.hash = '#contact';
+            });
         });
-    }, observerOptions);
+    });
 
-    document.querySelectorAll('.product-card, .about-content, .contact-form').forEach(element => {
-        observer.observe(element);
+    // Efekt paralaksy dla hero
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY;
+        const hero = document.querySelector('.hero');
+        hero.style.backgroundPositionY = `${scrollPos * 0.5}px`;
     });
 });

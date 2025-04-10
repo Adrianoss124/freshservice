@@ -72,13 +72,12 @@ body {
   align-items: center;
 }
 
-.logo-img {
-  height: 40px;
+.logo-png {
+  height: 80px;
   transition: transform var(--transition);
-  animation: float 3s ease-in-out infinite;
 }
 
-.logo-img:hover {
+.logo-png:hover {
   transform: scale(1.05);
 }
 

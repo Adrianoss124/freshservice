@@ -59,12 +59,12 @@ body.light .header {
     align-items: center;
 }
 
-.logo-img {
-    height: 40px;
+.logo-png {
+    height: 80px;
     transition: transform var(--transition);
 }
 
-.logo-img:hover {
+.logo-png:hover {
     transform: scale(1.05);
 }
 

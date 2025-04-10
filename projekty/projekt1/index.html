@@ -3,149 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUDMATEX - Nowoczesne Materiały Budowlane</title>
-    <meta name="description" content="Lider w produkcji wysokiej jakości materiałów budowlanych. Beton, stropy, systemy izolacyjne i rozwiązania konstrukcyjne.">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta name="description" content="Budmex – lider w nowoczesnych materiałach budowlanych: beton, systemy stropowe, izolacje. Innowacyjne rozwiązania dla budownictwa od 1994 roku.">
+    <meta name="keywords" content="Budmex, materiały budowlane, beton konstrukcyjny, systemy stropowe, izolacje, budownictwo ekologiczne, Warszawa">
+    <meta name="robots" content="index, follow">
+    <title>Budmex – Nowoczesne Rozwiązania Budowlane</title>
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/projekt/index.html">
+    <!-- Preload kluczowych zasobów -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="/freshservice/projekt/img/hero-bg.webp" as="image">
+    <!-- Font Awesome (optymalizacja asynchroniczna) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Glowny CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Główny CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Schematy JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Budmex",
+        "url": "https://adrianoss124.github.io/freshservice/projekty/projekt1/index.html",
+        "logo": "https://adrianoss124.github.io/freshservice/projekty/projekt1/img/logo.webp",
+        "description": "Budmex – lider w produkcji nowoczesnych materiałów budowlanych od 1994 roku.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Budowlana 15",
+            "addressLocality": "Warszawa",
+            "postalCode": "00-001",
+            "addressCountry": "PL"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+48123456789",
+            "contactType": "Customer Service",
+            "email": "kontakt@budmex.pl"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Nawigacja -->
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo">
-                <img src="img/logo.png" alt="TechService Logo" class="logo-img">
+            <a href="/freshservice/img/logo.png" class="logo">
+                <img src="/freshservice/projekty/projekt1/ChatGPT Image 10 kwi 2025, 20_30_56.png" alt="Budmex Logo" class="logo-img" loading="lazy">
             </a>
             <div class="nav-links" id="nav-links">
-                <a href="/" class="nav-link active">Strona Główna</a>
-                <a href="onas/onas.html" class="nav-link">O Nas</a>
-                <a href="projekty/index.html" class="nav-link">Projekty</a>
-                <a href="cennik/cennik.html" class="nav-link">Cennik</a>
-                <a href="zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
+                <a href="#home" class="nav-link active">Strona Główna</a>
+                <a href="#about" class="nav-link">O Nas</a>
+                <a href="#products" class="nav-link">Produkty</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+                <a href="#registration" class="nav-link nav-cta">Zostań Partnerem</a>
             </div>
             <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
+                <span class="hamburger-icon"></span>
             </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Sekcja Hero -->
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Budujemy Przyszłość <span class="highlight">Budownictwa</span></h1>
-                <p class="hero-text">Innowacyjne rozwiązania od 1994 roku</p>
-                <div class="hero-cta">
-                    <a href="#products" class="btn btn-secondary">Poznaj Produkty</a>
-                    <a href="#about" class="btn btn-outline">O Firmie</a>
+                <h1 class="hero-title" data-aos="fade-up">Budmex – <span class="highlight">Przyszłość Budownictwa</span></h1>
+                <p class="hero-text" data-aos="fade-up" data-aos-delay="200">Innowacyjne materiały budowlane od 1994 roku</p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#products" class="btn btn-primary">Nasze Produkty</a>
+                    <a href="#contact" class="btn btn-outline">Skontaktuj się</a>
                 </div>
+            </div>
+            <div class="hero-scroll">
+                <span>Zjedź w dół</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Sekcja O nas -->
     <section class="about section-padding" id="about">
         <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up">Ponad 30 Lat <span class="highlight">Doświadczenia</span></h2>
             <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">30 Lat Na Rynku <span class="highlight">Budowlanym</span></h2>
-                    <p class="about-text">Jako lider w branży budowlanej, dostarczamy najwyższej jakości materiały budowlane wspierające zrównoważony rozwój i innowacyjne rozwiązania konstrukcyjne.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-certificate feature-icon"></i>
-                            <h3 class="feature-title">Certyfikowana Jakość</h3>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-leaf feature-icon"></i>
-                            <h3 class="feature-title">Ekologiczne Rozwiązania</h3>
-                        </div>
-                    </div>
+                <div class="about-content" data-aos="fade-right">
+                    <p>Jesteśmy liderem w branży budowlanej, dostarczając certyfikowane materiały wspierające nowoczesne i ekologiczne budownictwo. Od 1994 roku realizujemy projekty, które kształtują przyszłość.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-certificate"></i> Certyfikowana jakość ISO 9001</li>
+                        <li><i class="fas fa-leaf"></i> Zrównoważone rozwiązania</li>
+                        <li><i class="fas fa-rocket"></i> Innowacyjne technologie</li>
+                    </ul>
                 </div>
-                <div class="about-image">
-                    <img src="img/about.jpg" alt="O firmie BUDMATEX" class="about-img">
+                <div class="about-image" data-aos="fade-left">
+                    <img src="/freshservice/projekt/img/about.webp" alt="Budmex – O firmie" class="about-img" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Sekcja Produkty -->
     <section class="products section-padding" id="products">
         <div class="section-container">
-            <h2 class="section-title">Nasze <span class="highlight">Produkty</span></h2>
+            <h2 class="section-title" data-aos="fade-up">Nasze <span class="highlight">Produkty</span></h2>
             <div class="products-grid">
-                <article class="product-card">
-                    <img src="img/products/beton.jpg" alt="Beton" class="product-img">
+                <article class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="/freshservice/projekt/img/products/beton.webp" alt="Beton konstrukcyjny" class="product-img" loading="lazy">
                     <div class="product-content">
                         <h3 class="product-title">Beton Konstrukcyjny</h3>
-                        <p class="product-text">Klasy C20/25 do C50/60 z możliwością indywidualnej modyfikacji</p>
-                        <button class="btn btn-outline product-btn">Specyfikacja</button>
+                        <p class="product-text">Od C20/25 do C50/60 – dostosowany do Twoich potrzeb.</p>
+                        <button class="btn btn-outline product-btn" data-spec="beton">Specyfikacja</button>
                     </div>
                 </article>
-                
-                <article class="product-card">
-                    <img src="img/products/stropy.jpg" alt="Stropy" class="product-img">
+                <article class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="/freshservice/projekt/img/products/stropy.webp" alt="Systemy stropowe" class="product-img" loading="lazy">
                     <div class="product-content">
                         <h3 class="product-title">Systemy Stropowe</h3>
-                        <p class="product-text">Nowoczesne rozwiązania stropów teriva i filigran</p>
-                        <button class="btn btn-outline product-btn">Specyfikacja</button>
+                        <p class="product-text">Teriva i filigran – solidność i nowoczesność.</p>
+                        <button class="btn btn-outline product-btn" data-spec="stropy">Specyfikacja</button>
                     </div>
                 </article>
-                
-                <article class="product-card">
-                    <img src="img/products/izolacja.jpg" alt="Izolacja" class="product-img">
+                <article class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="/freshservice/projekt/img/products/izolacja.webp" alt="Systemy izolacyjne" class="product-img" loading="lazy">
                     <div class="product-content">
                         <h3 class="product-title">Systemy Izolacyjne</h3>
-                        <p class="product-text">Kompleksowe rozwiązania termoizolacji budynków</p>
-                        <button class="btn btn-outline product-btn">Specyfikacja</button>
+                        <p class="product-text">Termoizolacja na najwyższym poziomie.</p>
+                        <button class="btn btn-outline product-btn" data-spec="izolacja">Specyfikacja</button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sekcja Kontakt -->
     <section class="contact section-padding" id="contact">
         <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up">Skontaktuj się z <span class="highlight">Nami</span></h2>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 class="section-title">Skontaktuj się z <span class="highlight">Nami</span></h2>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <p>ul. Budowlana 15<br>00-001 Warszawa</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone contact-icon"></i>
-                            <p>+48 123 456 789</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope contact-icon"></i>
-                            <p>kontakt@budmatex.pl</p>
-                        </div>
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <p>ul. Budowlana 15, 00-001 Warszawa</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <p><a href="mailto:kontakt@budmex.pl">kontakt@budmex.pl</a></p>
                     </div>
                     <div class="contact-social">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
                     <div class="form-group">
-                        <input type="text" placeholder="Imię i Nazwisko" required>
+                        <input type="text" placeholder="Imię i Nazwisko" required aria-label="Imię i Nazwisko">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Adres e-mail" required>
+                        <input type="email" placeholder="Adres e-mail" required aria-label="Adres e-mail">
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Treść wiadomości" required></textarea>
+                        <textarea rows="5" placeholder="Treść wiadomości" required aria-label="Treść wiadomości"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Wyślij Wiadomość</button>
                 </form>
@@ -153,46 +175,45 @@
         </div>
     </section>
 
-    <!-- Registration Modal -->
+    <!-- Modal Rejestracji -->
     <div class="modal" id="registrationModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">Rejestracja Partnera</h2>
+        <div class="modal-content" data-aos="zoom-in">
+            <span class="close-modal" aria-label="Zamknij modal">&times;</span>
+            <h2 class="modal-title">Zostań Partnerem Budmex</h2>
             <form class="registration-form" id="registrationForm">
                 <div class="form-group">
-                    <input type="text" placeholder="Nazwa Firmy" required>
+                    <input type="text" placeholder="Nazwa Firmy" required aria-label="Nazwa Firmy">
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="E-mail firmowy" required>
+                    <input type="email" placeholder="E-mail firmowy" required aria-label="E-mail firmowy">
                 </div>
                 <div class="form-group">
-                    <input type="tel" placeholder="Telefon kontaktowy" pattern="[0-9]{9}" required>
+                    <input type="tel" placeholder="Telefon kontaktowy" pattern="[0-9]{9}" required aria-label="Telefon kontaktowy">
                 </div>
                 <button type="submit" class="btn btn-primary">Zarejestruj Firmę</button>
             </form>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Stopka -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col">
-                <img src="img/logo-white.png" alt="BUDMATEX" class="footer-logo">
-                <p class="footer-text">© 2024 BUDMATEX Sp. z o.o.<br>Wszelkie prawa zastrzeżone</p>
+                <img src="/freshservice/projekty/projekt1/ChatGPT Image 10 kwi 2025, 20_30_56.png" alt="Budmex Logo" class="footer-logo" loading="lazy">
+                <p class="footer-text">© 2025 Budmex Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-col">
-                
                 <h4 class="footer-title">Produkty</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Beton</a></li>
-                    <li><a href="#">Stropy</a></li>
-                    <li><a href="#">Izolacje</a></li>
+                    <li><a href="#products">Beton</a></li>
+                    <li><a href="#products">Stropy</a></li>
+                    <li><a href="#products">Izolacje</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4 class="footer-title">Firma</h4>
                 <ul class="footer-links">
-                    <li><a href="#">O nas</a></li>
+                    <li><a href="#about">O nas</a></li>
                     <li><a href="#">Kariera</a></li>
                     <li><a href="#">Certyfikaty</a></li>
                 </ul>
@@ -200,8 +221,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <!-- Skrypty -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
