@@ -6,16 +6,6 @@
     <title>TechService – Profesjonalna Naprawa Komputerów</title>
     <meta name="description" content="TechService – naprawa komputerów, optymalizacja i składanie PC w Starym Ratowie, Łomża, Kolno, Ostrołęka. Szybka obsługa, 30 dni gwarancji. Zadzwoń: 790 780 003.">
     <meta name="keywords" content="naprawa komputerów Stare Ratowo, serwis komputerowy Łomża, optymalizacja PC Kolno, składanie komputerów Ostrołęka, TechService">
-    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/index.html">
-    <meta property="og:title" content="TechService – Profesjonalna Naprawa Komputerów w Starym Ratowie">
-    <meta property="og:description" content="TechService – naprawa komputerów, optymalizacja i składanie PC w Starym Ratowie i okolicach. Zadzwoń: 790 780 003.">
-    <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
-    <meta property="og:url" content="https://adrianoss124.github.io/freshservice/index.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TechService – Profesjonalna Naprawa Komputerów">
-    <meta name="twitter:description" content="TechService – naprawa komputerów, optymalizacja i składanie PC w Starym Ratowie i okolicach.">
-    <meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script type="application/ld+json">
@@ -61,8 +51,7 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
     <script>
@@ -71,96 +60,137 @@
         gtag('js', new Date());
         gtag('config', 'G-1PK6BMVN9X');
     </script>
+</head>
 <body>
     <div class="menu-overlay"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/logo.webp" alt="TechService Logo" class="logo-png"></a>
+            <nav class="nav-links">
+                <a href="#zlec" class="nav-link">Zleć naprawę</a>
+                <a href="#cennik" class="nav-link">Cennik</a>
+                <a href="#projekty" class="nav-link">Projekty</a>
+                <a href="#onas" class="nav-link">O nas</a>
+                <a href="#opinie" class="nav-link">Opinie</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-inner"></span>
+            </button>
+            <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
     <section class="hero">
-        <h1>Witaj w <span>TechService</span></h1>
-        <p>Twój lokalny ekspert od naprawy i optymalizacji komputerów w Starym Ratowie</p>
-        <a href="zlec/zlec.html" class="btn hero-btn">Zleć naprawę teraz</a>
+        <div class="hero-content">
+            <h1>Witaj w <span>TechService</span></h1>
+            <p>Twój lokalny ekspert od naprawy i optymalizacji komputerów w Starym Ratowie</p>
+            <p class="tagline">Szybka obsługa i 30 dni gwarancji na naprawy</p>
+            <a href="zlec/zlec.html" class="btn hero-btn">Zleć naprawę teraz</a>
+        </div>
     </section>
-    </nav>
     <main>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-wrench"></i>
+        <section class="services" id="zlec">
+            <div class="card">
+                <div class="service-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div class="content">
+                    <h2>Zleć naprawę</h2>
+                    <p>Szybka i profesjonalna pomoc.</p>
+                    <a href="zlec/zlec.html" class="btn"><span>Zgłoś usterkę</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="content">
-                <h2>Zleć naprawę</h2>
-                <p>Szybka i profesjonalna pomoc.</p>
-                <a href="zlec/zlec.html" class="btn"><span>Zgłoś usterkę</span><i class="fas fa-arrow-right"></i></a>
+            <div class="card" id="cennik">
+                <div class="service-icon">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+                <div class="content">
+                    <h2>Cennik</h2>
+                    <p>Przejrzyste ceny usług komputerowych.</p>
+                    <a href="cennik/cennik.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-euro-sign"></i>
+            <div class="card" id="projekty">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="content">
+                    <h2>Projekty</h2>
+                    <p>Nasze projekty stron internetowych</p>
+                    <a href="projekt/uslugi.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="content">
-                <h2>Cennik</h2>
-                <p>Przejrzyste ceny usług komputerowych.</p>
-                <a href="cennik/cennik.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+            <div class="card" id="onas">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="content">
+                    <h2>O firmie</h2>
+                    <p>Poznaj TechService</p>
+                    <a href="onas/onas.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-tools"></i>
+            <div class="card" id="opinie">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="content">
+                    <h2>Opinie klientów</h2>
+                    <p>Przeczytaj, co mówią o nas Klienci</p>
+                    <a href="reviews.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="content">
-                <h2>Projekty</h2>
-                <p>Nasze projekty stron internetowych</p>
-                <a href="projekt/uslugi.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+            <div class="card" id="faq">
+                <div class="service-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="content">
+                    <h2>FAQ</h2>
+                    <p>Znajdź odpowiedzi na najczęściej zadawane pytania</p>
+                    <a href="faq.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-building"></i>
+            <div class="card" id="kontakt">
+                <div class="service-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="content">
+                    <h2>Kontakt</h2>
+                    <p>Skontaktuj się z nami</p>
+                    <a href="contact.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="content">
-                <h2>O firmie</h2>
-                <p>Poznaj FreshService</p>
-                <a href="onas/onas.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="content">
-                <h2>Opinie klientów</h2>
-                <p>Przeczytaj, co mówią o nas Klienci</p>
-                <a href="reviews.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-question-circle"></i>
-            </div>
-            <div class="content">
-                <h2>FAQ</h2>
-                <p>Znajdź odpowiedzi na najczęściej zadawane pytania</p>
-                <a href="faq.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="service-icon">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="content">
-                <h2>Kontakt</h2>
-                <p>Skontaktuj się z nami</p>
-                <a href="contact.html" class="btn"><span>Więcej</span><i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </main>
-    <main class="container">
-        <h1>TechService – Profesjonalny Serwis Komputerowy w Starym Ratowie</h1>
-        <section>
-            <h2>Nasze Usługi</h2>
-            <p>TechService to Twój lokalny specjalista w naprawie komputerów, optymalizacji systemów i składaniu PC na zamówienie. Działamy w Starym Ratowie, Śniadowie oraz pobliskich miejscowościach, takich jak Łomża, Kolno i Ostrołęka. Rozwiązujemy problemy z wolnym działaniem sprzętu, usuwamy awarie podzespołów i budujemy wydajne komputery dostosowane do Twoich potrzeb. <a href="zlec/zlec.html">Zleć naprawę</a> lub sprawdź nasz <a href="cennik/cennik.html">cennik</a>.</p>
         </section>
-        <section>
-            <h2>Dlaczego Wybrać TechService?</h2>
-            <p>Jesteśmy blisko Ciebie – działamy w Starym Ratowie i obsługujemy okolice, w tym Łomżę, Kolno i Ostrołękę. Gwarantujemy szybką obsługę, 30-dniową gwarancję na naprawy i przystępne ceny. Skontaktuj się pod numerem <a href="tel:+48790780003">790 780 003</a> lub skorzystaj z <a href="zlec/zlec.html">formularza online</a>.</p>
-            <p>Sprawdź nasze <a href="onas/onas.html">o nas</a>, <a href="reviews.html">opinie klientów</a> lub <a href="faq.html">FAQ</a>.</p>
+        <section class="testimonials">
+            <h2>Co mówią nasi klienci?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Profesjonalna obsługa i szybka naprawa. Polecam!"</p>
+                    <cite>Jan Kowalski</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"W końcu znalazłem serwis, który naprawdę rozumie komputery."</p>
+                    <cite>Anna Nowak</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Świetna komunikacja i przystępne ceny. Zdecydowanie wrócę!"</p>
+                    <cite>Piotr Wiśniewski</cite>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <h2>TechService – Profesjonalny Serwis Komputerowy</h2>
+            <section>
+                <h3>Nasze Usługi</h3>
+                <p>TechService to Twój lokalny specjalista w naprawie komputerów, optymalizacji systemów i składaniu PC na zamówienie. Działamy w Starym Ratowie, Śniadowie oraz pobliskich miejscowościach, takich jak Łomża, Kolno i Ostrołęka. Rozwiązujemy problemy z wolnym działaniem sprzętu, usuwamy awarie podzespołów i budujemy wydajne komputery dostosowane do Twoich potrzeb. <a href="zlec/zlec.html">Zleć naprawę</a> lub sprawdź nasz <a href="cennik/cennik.html">cennik</a>.</p>
+            </section>
+            <section>
+                <h3>Dlaczego Wybrać TechService?</h3>
+                <p>Jesteśmy blisko Ciebie – działamy w Starym Ratowie i obsługujemy okolice, w tym Łomżę, Kolno i Ostrołękę. Gwarantujemy szybką obsługę, 30-dniową gwarancję na naprawy i przystępne ceny. Skontaktuj się pod numerem <a href="tel:+48790780003">790 780 003</a> lub skorzystaj z <a href="zlec/zlec.html">formularza online</a>.</p>
+                <p>Sprawdź nasze <a href="onas/onas.html">o nas</a>, <a href="reviews.html">opinie klientów</a> lub <a href="faq.html">FAQ</a>.</p>
+            </section>
         </section>
     </main>
     <div id="cookie-banner" class="cookie-banner">
@@ -169,14 +199,19 @@
         <button id="reject-cookies" class="btn">Odrzuć</button>
     </div>
     <footer class="footer">
-        <p>© 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+        <div class="footer-content">
+            <p>© 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+            <p><a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+            <p>Śledź nas na: <a href="https://www.facebook.com/TechServiceStareRatowo" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/madioz_" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        </div>
     </footer>
+    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
     <script src="script.js"></script>
     <script src="hamburger.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js');
+                navigator.serviceWorker.register('sw.js').catch(err => console.error('Service Worker registration failed:', err));
             });
         }
         function checkCookies() {

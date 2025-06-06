@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
         rootMargin: "0px 0px -50px 0px"
     };
 
+    // Diagnostyka: Sprawdzenie, czy hamburger istnieje
+    if (!hamburger) {
+        console.error("Hamburger button not found in HTML! Check DOM structure.");
+    } else {
+        console.log("Hamburger button found:", hamburger);
+        console.log("Hamburger display style:", window.getComputedStyle(hamburger).display);
+    }
+
     // Animacja Hero
     if (hero) {
         setTimeout(() => hero.classList.add("animate"), 100);
@@ -39,31 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Menu mobilne
-    if (hamburger && navLinks && menuOverlay) {
-        hamburger.addEventListener("click", () => {
-            const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-            hamburger.setAttribute("aria-expanded", !isExpanded);
-            navLinks.classList.toggle("active");
-            menuOverlay.classList.toggle("active");
-            document.body.classList.toggle("no-scroll");
-        });
-        menuOverlay.addEventListener("click", () => {
-            hamburger.setAttribute("aria-expanded", "false");
-            navLinks.classList.remove("active");
-            menuOverlay.classList.remove("active");
-            document.body.classList.remove("no-scroll");
-        });
-        navLinks.querySelectorAll(".nav-link").forEach(link => {
-            link.addEventListener("click", () => {
-                hamburger.setAttribute("aria-expanded", "false");
-                navLinks.classList.remove("active");
-                menuOverlay.classList.remove("active");
-                document.body.classList.remove("no-scroll");
-            });
-        });
-    }
-
     // Parallax dla Hero
     if (hero) {
         window.addEventListener("scroll", () => {
@@ -85,5 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add("light");
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
+    }
+
+    // Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 });
