@@ -443,3 +443,14 @@ body.no-scroll {
   opacity: 1;
   visibility: visible;
 }
+.services .card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.services .card ul li {
+    margin-bottom: 0.5rem;
+    color: #aaa;
+    font-size: 0.95rem;
+}

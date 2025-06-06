@@ -1,22 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    const menuOverlay = document.querySelector(".menu-overlay");
     const cards = document.querySelectorAll(".card");
     const hero = document.querySelector(".hero");
     const themeToggle = document.querySelector(".theme-toggle");
+    const navLinks = document.querySelectorAll(".nav-link");
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     };
-
-    // Diagnostyka: Sprawdzenie, czy hamburger istnieje
-    if (!hamburger) {
-        console.error("Hamburger button not found in HTML! Check DOM structure.");
-    } else {
-        console.log("Hamburger button found:", hamburger);
-        console.log("Hamburger display style:", window.getComputedStyle(hamburger).display);
-    }
 
     // Animacja Hero
     if (hero) {
@@ -69,6 +59,26 @@ document.addEventListener("DOMContentLoaded", function () {
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
     }
+
+    // Płynne przewijanie do sekcji po kliknięciu w linki nawigacyjne
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
+        if (href.startsWith("#")) {
+            // Link do sekcji na tej samej stronie - obsłuż przewijanie
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80, // Uwzględnia wysokość nagłówka
+                    behavior: "smooth"
+                });
+            }
+        }
+        // Jeśli href nie zaczyna się od "#", domyślne działanie (przejście do strony) zostanie wykonane
+    });
+});
 
     // Back to top button
     const backToTop = document.getElementById('back-to-top');

@@ -1,95 +1,126 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://adrianoss124.github.io/freshservice/projekt/uslugi.html">
-  <meta property="og:title" content="Zleć naprawę w TechService - Formularz online">
-<meta property="og:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
-<meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
-<meta property="og:url" content="https://adrianoss124.github.io/freshservice/projekt/uslugi.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zleć naprawę w TechService - Formularz online">
-<meta name="twitter:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
-<meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projekty - TechService</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="script.js" as="script">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-  <link rel="manifest" href="/freshservice/manifest.json">
-  <link rel="icon" type="image/x-icon" href="/freshservice/favicon.ico">
-  <link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechService – Projekty</title>
+    <meta name="description" content="Poznaj nasze projekty stron internetowych i inne realizacje w TechService.">
+    <meta name="keywords" content="projekty stron internetowych, TechService projekty, Stare Ratowo">
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/projekt/uslugi.html">
+    <meta property="og:title" content="Projekty w TechService – Nasze realizacje">
+    <meta property="og:description" content="Przeglądaj nasze projekty – od stron firmowych po sklepy internetowe!">
+    <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
+    <meta property="og:url" content="https://adrianoss124.github.io/freshservice/projekt/uslugi.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projekty w TechService – Nasze realizacje">
+    <meta name="twitter:description" content="Przeglądaj nasze projekty – od stron firmowych po sklepy internetowe!">
+    <meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav-container">
-        <a href="../index.html" class="logo">
-            <img src="../img/logo.png" alt="TechService Logo" class="logo-png">
-        </a>
-        <div class="nav-links" id="nav-links">
-            <a href="../index.html" class="nav-link active">Strona Główna</a>
-            <a href="../onas/onas.html" class="nav-link">O Nas</a>
-            <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
-            <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
-            <a href="../zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
-        </div>
-        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
-            <span class="hamburger-box">
+    <div class="menu-overlay"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html"><img src="../img/logo.png" alt="TechService Logo" class="logo-png"></a>
+            <nav class="nav-links" id="nav-links">
+                <a href="../index.html#zlec" class="nav-link">Zleć naprawę</a>
+                <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="../projekt/uslugi.html" class="nav-link active">Projekty</a>
+                <a href="../onas/onas.html" class="nav-link">O nas</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
-            </span>
-        </button>
-    </nav>
-</header>
-  <div class="menu-overlay"></div>
-  <main>
-    <section class="projects-section">
-      <h2 class="section-title">Nasze Projekty</h2>
-      <div class="projects-container">
-        <!-- Projekt 1 -->
-        <div class="project-item">
-          <div class="project-link">
-            <a href="../projekty/projekt1/index.html" target="_blank">
-              <h3>Projekt 1: Strona Firmowa</h3>
-            </a>
-          </div>
-          <div class="project-features">
-            <ul>
-              <li><i class="fas fa-check"></i> HTML5 &amp; CSS3</li>
-              <li><i class="fas fa-check"></i> JavaScript</li>
-              <li><i class="fas fa-check"></i> PHP</li>
-              <li><i class="fas fa-check"></i> Łączność z bazą danych</li>
-              <li><i class="fas fa-check"></i> Formularz rejestracji</li>
-            </ul>
-          </div>
+            </button>
+            <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
         </div>
-
-        <!-- Projekt 2 -->
-        <div class="project-item">
-          <div class="project-link">
-            <a href="#" target="_blank">
-              <h3>Projekt 2: Sklep Internetowy</h3>
-            </a>
-          </div>
-          <div class="project-features">
-            <ul>
-              <li><i class="fas fa-check"></i> Responsywny design</li>
-              <li><i class="fas fa-check"></i> Integracja z systemem płatności</li>
-              <li><i class="fas fa-check"></i> System zarządzania treścią</li>
-              <li><i class="fas fa-check"></i> Bezpieczeństwo danych</li>
-            </ul>
-          </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nasze <span>Projekty</span></h1>
+            <p>Przeglądaj nasze realizacje i zobacz, jak możemy pomóc Twojej firmie.</p>
         </div>
-      </div>
     </section>
-  </main>
-</div>
-<footer class="footer">
-  <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
-</footer>
-  <script src="script.js"></script>
-  <script src="/hamburger.js"></script>
+    <main>
+        <section class="services">
+            <div class="card">
+                <div class="service-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div class="content">
+                    <h2>Projekt 1: Strona Firmowa</h2>
+                    <p>Nowoczesna strona internetowa dla lokalnej firmy z responsywnym designem.</p>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Łączność z bazą danych</li>
+                        <li>Formularz rejestracji</li>
+                    </ul>
+                    <a href="../projekty/projekt1/index.html" class="btn"><span>Zobacz więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="content">
+                    <h2>Projekt 2: Sklep Internetowy</h2>
+                    <p>Sklep internetowy z integracją płatności i systemem zarządzania treścią.</p>
+                    <ul>
+                        <li>Responsywny design</li>
+                        <li>Integracja z systemem płatności</li>
+                        <li>System zarządzania treścią</li>
+                        <li>Bezpieczeństwo danych</li>
+                    </ul>
+                    <a href="#" class="btn"><span>Zobacz więcej</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Używamy cookies (np. Google Analytics) do analizy ruchu. Klikając "Akceptuję", zgadzasz się na ich użycie. Zobacz <a href="../privacy.html">Politykę Prywatności</a>.</p>
+        <button id="accept-cookies" class="btn">Akceptuję</button>
+        <button id="reject-cookies" class="btn">Odrzuć</button>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+            <p><a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../hamburger.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js').catch(err => console.error('Service Worker registration failed:', err));
+            });
+        }
+        function checkCookies() {
+            const banner = document.getElementById('cookie-banner');
+            if (!localStorage.getItem('cookies-accepted')) {
+                banner.style.display = 'block';
+            } else {
+                banner.style.display = 'none';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', checkCookies);
+        document.getElementById('accept-cookies')?.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+        document.getElementById('reject-cookies')?.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'rejected');
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
 </body>
 </html>

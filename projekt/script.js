@@ -213,3 +213,119 @@ const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('[data-src]').forEach(element => {
   lazyLoadObserver.observe(element);
 });
+// ==============================
+//   Ustawienia globalne skryptów
+// ==============================
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
+  initCookiesBanner();
+  initScrollAnimations();
+});
+
+// ==============================
+//   Personalizacja motywu (dark/light)
+// ==============================
+function initThemeToggle() {
+  const body = document.body;
+  const toggleBtn = document.querySelector('.theme-toggle');
+  const icon = toggleBtn?.querySelector('i');
+
+  // Jeśli w localStorage jest zapisana preferencja, użyj jej
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light');
+    icon.classList.replace('fa-moon', 'fa-sun');
+  }
+
+  toggleBtn?.addEventListener('click', () => {
+    body.classList.toggle('light');
+    const isLight = body.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    if (isLight) {
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  });
+}
+
+// ==============================
+//   Banner cookies (tak samo jak na stronie głównej)
+// ==============================
+function initCookiesBanner() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const rejectBtn = document.getElementById('reject-cookies');
+  
+  if (!banner) return;
+  
+  if (!localStorage.getItem('cookies-accepted')) {
+    banner.style.display = 'block';
+  } else {
+    banner.style.display = 'none';
+  }
+  
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookies-accepted', 'true');
+    banner.style.display = 'none';
+  });
+  
+  rejectBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookies-accepted', 'rejected');
+    banner.style.display = 'none';
+  });
+}
+
+// ==============================
+//   Animacja przy przewijaniu (IntersectionObserver)
+// ==============================
+function initScrollAnimations() {
+  const animItems = document.querySelectorAll('.animate');
+
+  if (!('IntersectionObserver' in window) || animItems.length === 0) {
+    // jeżeli brak wsparcia, po prostu pokaż wszystko
+    animItems.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  animItems.forEach(item => {
+    observer.observe(item);
+  });
+}
+// W ../script.js
+function initThemeToggle() {
+    const body = document.body;
+    const toggleBtn = document.querySelector('.theme-toggle');
+    const icon = toggleBtn?.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light');
+        icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    toggleBtn?.addEventListener('click', () => {
+        body.classList.toggle('light');
+        const isLight = body.classList.contains('light');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        icon.classList.replace(isLight ? 'fa-moon' : 'fa-sun', isLight ? 'fa-sun' : 'fa-moon');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
+});

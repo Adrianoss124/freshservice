@@ -73,8 +73,9 @@ body {
 }
 
 .logo-png {
-  height: 80px;
-  transition: transform var(--transition);
+    max-height: 80px;
+    max-width: 350px;
+    transition: transform var(--transition);
 }
 
 .logo-png:hover {
