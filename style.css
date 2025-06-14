@@ -90,8 +90,7 @@ a:hover {
 }
 
 .logo-png {
-    max-height: 80px;
-    max-width: 350px;
+    height: 40px;
     transition: transform var(--transition);
 }
 
@@ -300,9 +299,32 @@ main {
 }
 
 .about {
-    padding: 2rem 0;
+    padding: 2rem 1rem;      /* zwiększono poziome i pionowe marginesy */
+    margin-top: 2rem;        /* dystans od poprzedniej sekcji */
 }
-
+.about > section {
+    margin-bottom: 2rem;     /* przestrzeń między dwiema podsekcjami */
+}
+.about h2 {
+    font-size: 1.8rem;      /* zmniejszenie z 2rem */
+    margin-bottom: 1rem;    /* przestrzeń pod nagłówkiem */
+    font-weight: 600;       /* lżejszy krój, jeśli chcesz */
+    color: var(--accent);   /* opcjonalnie inny kolor dla kontrastu */
+}
+.about h3 {
+    font-size: 1.3rem;      /* zmniejszenie z domyślnego 1.5rem */
+    margin-top: 1.5rem;     /* przestrzeń nad śródtytułem */
+    margin-bottom: 0.5rem;  /* przestrzeń pod śródtytułem */
+    font-weight: 500;       /* subtelniejszy wygląd */
+    color: var(--primary);  /* opcjonalnie główny kolor marki */
+}
+.about p {
+    font-size: 1rem;         /* domyślnie 1rem, ale możesz eksperymentować 0.95rem–1.05rem */
+    line-height: 1.6;        /* poprawiona czytelność linii */
+    max-width: 800px;        /* ogranicza szerokość tekstu do wygodnej linii */
+    margin-bottom: 1rem;     /* odstęp między akapitami */
+    color: var(--light-text);/* lub #eee; dla body.light może być #333 */
+}
 /* Karty Usług */
 .card {
     background: var(--card-gradient);

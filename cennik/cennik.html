@@ -28,34 +28,29 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav-container">
-            <a href="../index.html" class="logo">
-                <img src="../img/logo.png" alt="TechService Logo" class="logo-png">
-            </a>
-            <div class="nav-links" id="nav-links">
-                <a href="../index.html" class="nav-link active">Strona Główna</a>
-                <a href="../onas/onas.html" class="nav-link">O Nas</a>
+        <div class="nav-container">
+            <a href="../index.html"><img src="../img/logo.png" alt="TechService Logo" class="logo-png"></a>
+            <nav class="nav-links" id="nav-links">
+                <a href="../zlec/zlec.html" class="nav-link">Zleć naprawę</a>
+                <a href="../cennik/cennik.html" class="nav-link active">Cennik</a>
                 <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
-                <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
-                <a href="../zlec/zlec.html" class="nav-link">Zleć Naprawę</a>
-            </div>
-            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
+                <a href="../onas/onas.html" class="nav-link">O nas</a>
+                <a href="../reviews.html" class="nav-link">Opinie</a>
+                <a href="../faq.html" class="nav-link">FAQ</a>
+                <a href="../contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-inner"></span>
             </button>
-        </nav>
+        </div>
     </header>
     <!-- Dodany overlay dla menu mobilnego -->
     <div class="menu-overlay"></div>
     <section class="pricing-section">
-        <div class="filter-container">
-            <button id="sortPrice">Sortuj po cenie</button>
-            <button id="resetFilter">Resetuj</button>
-        </div>
         <div class="pricing-container">
             <h2 class="section-title">Cennik Usług TechService</h2>
-            <p>Ceny są kwotami brutto (działalność nierejestrowana nie podlega VAT). Szczegóły płatności w <a href="../terms.html">Regulaminie</a>.</p>
+            <p>Ceny są kwotami brutto. Szczegóły płatności w <a href="../terms.html">Regulaminie</a>.</p>
             <div class="table-wrapper">
                 <table class="pricing-table">
                     <thead>

@@ -2,17 +2,24 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/zlec/zlec.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zleć Naprawę - TechService</title>
+    <meta name="description" content="Zleć naprawę komputera online w TechService Stare Ratowo. Szybki kontakt, profesjonalna obsługa. Telefon: 790 780 003.">
+    <meta name="keywords" content="zleć naprawę komputera, serwis online Stare Ratowo, TechService naprawa PC">
+    
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Zleć naprawę w TechService - Formularz online">
-<meta property="og:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
-<meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
-<meta property="og:url" content="https://adrianoss124.github.io/freshservice/zlec/zlec.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Zleć naprawę w TechService - Formularz online">
-<meta name="twitter:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
-<meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
-<script type="application/ld+json">
+    <meta property="og:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
+    <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
+    <meta property="og:url" content="https://adrianoss124.github.io/freshservice/zlec/zlec.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zleć naprawę w TechService - Formularz online">
+    <meta name="twitter:description" content="Zleć naprawę swojego komputera w TechService – szybka i profesjonalna obsługa online!">
+    <meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/workshop.jpg">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -21,25 +28,37 @@
       "description": "Formularz kontaktowy do zlecania napraw komputerów w TechService."
     }
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-    <title>Zleć Naprawę - TechService</title>
-    <meta name="description" content="Zleć naprawę komputera online w TechService Stare Ratowo. Szybki kontakt, profesjonalna obsługa. Telefon: 790 780 003.">
-    <meta name="keywords" content="zleć naprawę komputera, serwis online Stare Ratowo, TechService naprawa PC">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/zlec/zlec.html">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-        <link rel="preload" href="style.css" as="style">
-<link rel="preload" href="script.js" as="script">
+    <!-- Manifest -->
     <link rel="manifest" href="/freshservice/manifest.json">
     <link rel="icon" type="image/x-icon" href="/freshservice/favicon.ico">
-<link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1PK6BMVN9X');
+    </script>
 </head>
 <body>
+    <div class="menu-overlay"></div>
     <header class="header">
         <div class="nav-container">
-            <a href="index.html"><img src="img/logo.png" alt="TechService Logo" class="logo-png"></a>
+            <a href="../index.html"><img src="../img/logo.png" alt="TechService Logo" class="logo-png"></a>
             <nav class="nav-links" id="nav-links">
-                <a href="../zlec/zlec.html" class="nav-link">Zleć naprawę</a>
+                <a href="../zlec/zlec.html" class="nav-link active">Zleć naprawę</a>
                 <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
                 <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
                 <a href="../onas/onas.html" class="nav-link">O nas</a>
@@ -51,15 +70,14 @@
             <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
             </button>
-            <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
         </div>
     </header>
-    <div class="menu-overlay"></div>
 
     <section class="form-section">
         <div class="form-container">
             <h1>Zleć Naprawę Komputera Online – TechService</h1>
             <p>Wypełnij formularz, aby zgłosić problem z komputerem. Odpowiadamy w ciągu 24 godzin.</p>
+            
             <form id="repairForm" action="https://formspree.io/f/xeoeznya" method="POST">
                 <div class="form-group">
                     <label for="system">System operacyjny:</label>
@@ -70,7 +88,9 @@
                         <option value="linux">Linux</option>
                         <option value="brak">Brak systemu</option>
                     </select>
+                    <span class="error-message" id="system-error"></span>
                 </div>
+                
                 <div class="form-group">
                     <label for="serviceType">Typ usługi:</label>
                     <select id="serviceType" name="serviceType" class="form-input" required>
@@ -78,46 +98,81 @@
                         <option value="optymalizacja">Optymalizacja</option>
                         <option value="montaz">Montaż komputera</option>
                         <option value="czyszczenie">Czyszczenie</option>
+                        <option value="naprawa">Naprawa sprzętu</option>
+                        <option value="wirusy">Usuwanie wirusów</option>
                         <option value="inne">Inne</option>
                     </select>
+                    <span class="error-message" id="serviceType-error"></span>
                 </div>
+                
                 <div class="form-group">
                     <label for="fullName">Imię i Nazwisko:</label>
                     <input type="text" id="fullName" name="name" class="form-input" required>
+                    <span class="error-message" id="fullName-error"></span>
                 </div>
+                
                 <div class="form-group">
                     <label for="email">Adres e-mail:</label>
                     <input type="email" id="email" name="email" class="form-input" required>
+                    <span class="error-message" id="email-error"></span>
                 </div>
+                
+                <div class="form-group">
+                    <label for="phone">Numer telefonu:</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="np. 123-456-789" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+                
                 <div class="form-group">
                     <label for="description">Opis problemu:</label>
-                    <textarea id="description" name="message" class="form-input" rows="5" required></textarea>
+                    <textarea id="description" name="message" class="form-input" rows="5" placeholder="Opisz szczegółowo problem z urządzeniem..." required></textarea>
+                    <span class="error-message" id="description-error"></span>
                 </div>
-                <label>
-                    <input type="checkbox" name="consent" required> Wyrażam zgodę na przetwarzanie moich danych osobowych przez Adriana Krajewskiego w celu realizacji usługi zgodnie z <a href="../privacy.html">Polityką Prywatności</a>.
-                </label>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Adriana Krajewskiego w celu realizacji usługi zgodnie z <a href="../privacy.html">Polityką Prywatności</a>.</label>
+                </div>
+                
                 <input type="hidden" name="_subject" value="Nowe zgłoszenie naprawy">
                 <input type="hidden" name="_language" value="pl">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-block" id="wyslij">
-                        <i class="fas fa-paper-plane"></i> Wyślij zgłoszenie
-                    </button>
-                </div>
+                
+                <button type="submit" class="btn" id="wyslij">
+                    <i class="fas fa-paper-plane"></i> Wyślij zgłoszenie
+                </button>
             </form>
+            
             <div class="form-info">
                 <p>Po wysłaniu formularza skontaktujemy się z Tobą w ciągu 24 godzin.</p>
-                <p class="privacy-info">
-                    <a href="../privacy.html" target="_blank">Przeczytaj naszą politykę prywatności</a>
-                </p>
+                <p>Administratorem danych jest Adrian Krajewski, Stare Ratowo 9a. Dane przetwarzamy na podstawie art. 6 ust. 1 lit. b RODO (realizacja usługi).</p>
+                <p><a href="../privacy.html" target="_blank">Przeczytaj naszą politykę prywatności</a></p>
             </div>
-            <p class="form-info">Administratorem danych jest Adrian Krajewski, Stare Ratowo 9a. Dane przetwarzamy na podstawie art. 6 ust. 1 lit. b RODO (realizacja usługi).</p>
         </div>
     </section>
+    
+    <div class="modal" id="responseModal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button class="modal-close">OK</button>
+        </div>
+    </div>
+    
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Używamy cookies (np. Google Analytics) do analizy ruchu. Klikając "Akceptuję", zgadzasz się na ich użycie. Zobacz <a href="../privacy.html">Politykę Prywatności</a>.</p>
+        <button id="accept-cookies" class="btn">Akceptuję</button>
+        <button id="reject-cookies" class="btn">Odrzuć</button>
+    </div>
+    
     <footer class="footer">
-        <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
+        <div class="footer-content">
+            <p>© 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+            <p><a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
+            <p>Śledź nas na: <a href="https://www.facebook.com/TechServiceStareRatowo" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/madioz_" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        </div>
     </footer>
-    <script src="../hamburger.js"></script>
+    
+    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
+    
     <script src="script.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>

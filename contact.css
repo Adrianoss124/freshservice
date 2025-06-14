@@ -60,7 +60,7 @@ body.light .header {
 }
 
 .logo-png {
-    height: 80px;
+    height: 40px;
     transition: transform var(--transition);
 }
 
@@ -295,5 +295,66 @@ body.light .footer {
     }
     .contact-map iframe {
         height: 300px;
+    }
+}
+body.light .hamburger-inner,
+body.light .hamburger-inner::before,
+body.light .hamburger-inner::after {
+    background: var(--dark-text);
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger-inner {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--light-text);
+    position: relative;
+    transition: transform var(--transition);
+    margin: 0 auto;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--light-text);
+    position: absolute;
+    transition: transform var(--transition);
+}
+
+.hamburger-inner::before {
+    top: -8px;
+}
+
+.hamburger-inner::after {
+    top: 8px;
+}
+
+.hamburger.active .hamburger-inner {
+    transform: rotate(45deg);
+}
+
+.hamburger.active .hamburger-inner::before {
+    transform: translateY(8px) rotate(-90deg);
+}
+
+.hamburger.active .hamburger-inner::after {
+    opacity: 0;
+}
+@media (max-width: 992px) {
+    .header .nav-container .hamburger {
+        display: block;
     }
 }
