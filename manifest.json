@@ -1,6 +1,6 @@
 {
-    "name": "TechService – Serwis Komputerowy",
-    "short_name": "TechService",
+    "name": "freshtech – Serwis Komputerowy",
+    "short_name": "freshtech",
     "description": "Profesjonalna naprawa komputerów w Starym Ratowie i okolicach.",
     "start_url": "/freshservice/index.html",
     "display": "standalone",

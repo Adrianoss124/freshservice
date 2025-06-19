@@ -1,6 +1,6 @@
-# TechService – Serwis Komputerowy Stare Ratowo
+# freshtech – Serwis Komputerowy Stare Ratowo
 
-Witaj na stronie TechService – lokalnego serwisu komputerowego w Starym Ratowie, obsługującego także Łomżę, Kolno i Ostrołękę. Oferujemy profesjonalną naprawę, optymalizację i składanie komputerów.
+Witaj na stronie freshtech – lokalnego serwisu komputerowego w Starym Ratowie, obsługującego także Łomżę, Kolno i Ostrołękę. Oferujemy profesjonalną naprawę, optymalizację i składanie komputerów.
 
 ## Struktura projektu
 - `index.html` – Strona główna

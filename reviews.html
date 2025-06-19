@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opinie Klientów – TechService Stare Ratowo</title>
-    <meta name="description" content="Opinie o TechService – serwis komputerowy w Starym Ratowie, Łomża, Kolno, Ostrołęka. Sprawdź, co mówią klienci!">
-    <meta name="keywords" content="opinie TechService, serwis komputerowy Stare Ratowo, naprawa PC Łomża, TechService Ostrołęka">
+    <title>Opinie Klientów</title>
+    <meta name="description" content="Opinie o freshtech – serwis komputerowy w Starym Ratowie, Łomża, Kolno, Ostrołęka. Sprawdź, co mówią klienci!">
+    <meta name="keywords" content="opinie freshtech, serwis komputerowy Stare Ratowo, naprawa PC Łomża, freshtech Ostrołęka">
     <link rel="canonical" href="https://adrianoss124.github.io/freshservice/reviews.html">
-    <meta property="og:title" content="Opinie Klientów – TechService Stare Ratowo">
-    <meta property="og:description" content="Opinie o TechService – Twój serwis komputerowy w Starym Ratowie i okolicach.">
+    <meta property="og:title" content="Opinie Klientów – freshtech Stare Ratowo">
+    <meta property="og:description" content="Opinie o freshtech – Twój serwis komputerowy w Starym Ratowie i okolicach.">
     <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
     <meta property="og:url" content="https://adrianoss124.github.io/freshservice/reviews.html">
     <meta property="og:type" content="website">
+        <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "name": "TechService – Adrian Krajewski",
+          "name": "freshtech – Adrian Krajewski",
           "review": [
             {
               "@type": "Review",
               "author": "Jan Kowalski",
-              "reviewBody": "Szybka i profesjonalna naprawa mojego laptopa. Polecam TechService!",
+              "reviewBody": "Szybka i profesjonalna naprawa mojego laptopa. Polecam freshtech!",
               "reviewRating": {
                 "@type": "Rating",
                 "ratingValue": "5",
@@ -46,12 +51,12 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="reviews.css">
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="nav-container">
-            <a href="index.html"><img src="img/logo.png" alt="TechService Logo" class="logo-png"></a>
+            <a href="index.html"><img src="img/logo.png" alt="freshtech Logo" class="logo-png"></a>
             <nav class="nav-links" id="nav-links">
                 <a href="zlec/zlec.html" class="nav-link">Zleć naprawę</a>
                 <a href="cennik/cennik.html" class="nav-link">Cennik</a>
@@ -69,7 +74,7 @@
     <div class="menu-overlay"></div>
     <nav class="breadcrumbs"></nav>
     <main class="container">
-        <h1>Opinie Klientów o TechService</h1>
+        <h1>Opinie Klientów o freshtech</h1>
         <p>Sprawdź, co mówią o nas klienci.</p>
         <div class="filter-buttons">
             <button class="filter-btn" data-rating="all">Wszystkie</button>
@@ -120,8 +125,13 @@
         <p>Chcesz podzielić się opinią? Napisz na <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a>.</p>
     </main>
     <footer class="footer">
-        <p>© 2025 Adrian Krajewski, działalność nierejestrowana. Stare Ratowo 9a, 18-411 Śniadowo, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a> | <a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+        <div class="footer-content">
+            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+            <p><a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        </div>
     </footer>
+    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
     <script src="script.js"></script>
     <script src="hamburger.js"></script>
     <script src="reviews.js"></script>

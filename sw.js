@@ -1,4 +1,4 @@
-const CACHE_NAME = 'techservice-cache-v1';
+const CACHE_NAME = 'freshtech-cache-v1';
 const urlsToCache = [
     '/freshservice/index.html',
     '/freshservice/style.css',

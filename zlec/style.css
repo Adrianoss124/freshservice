@@ -105,6 +105,7 @@ a:hover {
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    transition: right var(--transition); /* Dodaj tę linię */
 }
 
 .nav-link {
@@ -114,6 +115,7 @@ a:hover {
     padding: 0.5rem 0;
     font-weight: 500;
     transition: color var(--transition);
+    transition: right var(--transition);
 }
 
 body.light .nav-link {
@@ -521,6 +523,7 @@ body.light .footer {
         display: block;
     }
 
+    @media (max-width: 768px) {
     .nav-links {
         position: fixed;
         top: var(--header-height);
@@ -531,8 +534,8 @@ body.light .footer {
         background: rgba(26, 26, 26, 0.95);
         flex-direction: column;
         padding: 2rem;
-        transition: right var(--transition);
         z-index: 999;
+        transition: right var(--transition); /* Kluczowa linia */
     }
 
     body.light .nav-links {
@@ -542,10 +545,12 @@ body.light .footer {
     .nav-links.active {
         right: 0;
     }
+}
 
     .nav-link {
         padding: 1rem 0;
         font-size: 1.2rem;
+        transition: right var(--transition)
     }
 
     .form-section {
@@ -568,6 +573,7 @@ body.light .footer {
 
     .nav-link {
         font-size: 1rem;
+        transition: right var(--transition)
     }
 
     .form-section {
@@ -638,4 +644,110 @@ body.light .theme-toggle {
 
 .form-input.error {
     border-color: #ff4d4d;
+}
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background var(--transition), opacity var(--transition);
+    opacity: 0.8;
+}
+
+#back-to-top:hover {
+    background: #c22417;
+    opacity: 1;
+}/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background var(--transition), opacity var(--transition);
+    opacity: 0.8;
+}
+
+#back-to-top:hover {
+    background: #c22417;
+    opacity: 1;
+}
+/* Styl ogólny dla banera cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1e1e;
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.cookie-banner p {
+  margin: 0 0 15px 0;
+}
+
+.cookie-banner a {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.primary {
+  background-color: #ffa500;
+  color: #000;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Ukrycie banera, dopóki JS nie zdecyduje inaczej */
+.hidden {
+  display: none;
 }

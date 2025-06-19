@@ -46,11 +46,6 @@ body.light .header {
     border-bottom: 2px solid var(--primary);
 }
 
-body.light .footer {
-    background: var(--card-bg-light);
-    color: var(--dark-text);
-}
-
 body.light .hamburger-inner,
 body.light .hamburger-inner::before,
 body.light .hamburger-inner::after {
@@ -106,6 +101,7 @@ a:hover {
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    transition: right var(--transition); /* Dodaj tę linię */
 }
 
 .nav-link {
@@ -473,6 +469,10 @@ body.light .cookie-banner {
 }
 
 /* Footer */
+body.light .footer {
+    background: var(--card-bg-light);
+    color: var(--dark-text);
+}
 .footer {
     background: var(--card-bg);
     padding: 1rem;
@@ -480,6 +480,11 @@ body.light .cookie-banner {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #aaa;
+}
+
+body.light .footer {
+    background: var(--card-bg-light);
+    color: #666;
 }
 
 .footer a {
@@ -490,17 +495,7 @@ body.light .cookie-banner {
 
 .footer a:hover {
     color: var(--primary);
-}
-
-.footer i {
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    color: var(--accent);
-    transition: color var(--transition);
-}
-
-.footer i:hover {
-    color: var(--primary);
+    text-decoration: underline;
 }
 
 /* Back to Top Button */
@@ -599,4 +594,67 @@ body.light .cookie-banner {
         font-size: 0.6rem;
         padding: 0.2rem 0.4rem;
     }
+}
+/* Styl ogólny dla banera cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1e1e;
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.cookie-banner p {
+  margin: 0 0 15px 0;
+}
+
+.cookie-banner a {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.primary {
+  background-color: #ffa500;
+  color: #000;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Ukrycie banera, dopóki JS nie zdecyduje inaczej */
+.hidden {
+  display: none;
 }

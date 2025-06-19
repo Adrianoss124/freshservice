@@ -95,3 +95,29 @@ navLinks.forEach(link => {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const rejectBtn = document.getElementById("reject-cookies");
+
+  const COOKIE_KEY = "cookieConsent";
+
+  // Pokazuje baner, jeśli zgoda nie została wcześniej udzielona/odrzucona
+  if (!localStorage.getItem(COOKIE_KEY)) {
+    banner.classList.remove("hidden");
+  }
+
+  // Obsługa kliknięcia na "Akceptuję"
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem(COOKIE_KEY, "accepted");
+    banner.classList.add("hidden");
+    // Można tu uruchomić Google Analytics, jeśli trzeba
+  });
+
+  // Obsługa kliknięcia na "Odrzuć"
+  rejectBtn.addEventListener("click", () => {
+    localStorage.setItem(COOKIE_KEY, "rejected");
+    banner.classList.add("hidden");
+    // Można tu dezaktywować GA lub inne skrypty
+  });
+});

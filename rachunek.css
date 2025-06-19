@@ -70,6 +70,7 @@ body.light .header {
 .nav-links {
     display: flex;
     gap: 2rem;
+    transition: right var(--transition); /* Dodaj tę linię */
 }
 
 .nav-link {
@@ -253,6 +254,10 @@ body.light .invoice-table th, body.light .invoice-table td {
 }
 
 /* Footer */
+body.light .footer {
+    background: var(--card-bg-light);
+    color: var(--dark-text);
+}
 .footer {
     background: var(--card-bg);
     padding: 1rem;
@@ -270,10 +275,12 @@ body.light .footer {
 .footer a {
     color: var(--accent);
     text-decoration: none;
+    transition: color var(--transition);
 }
 
 .footer a:hover {
     color: var(--primary);
+    text-decoration: underline;
 }
 
 /* Responsywność */
@@ -370,4 +377,26 @@ body.light .hamburger-inner::after {
     .header .nav-container .hamburger {
         display: block;
     }
+}
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background var(--transition), opacity var(--transition);
+    opacity: 0.8;
+}
+
+#back-to-top:hover {
+    background: #c22417;
+    opacity: 1;
 }
