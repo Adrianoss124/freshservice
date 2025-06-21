@@ -2,34 +2,12 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/cennik/cennik.html">
-    <meta property="og:title" content="Cennik usług freshtech">
-<meta property="og:description" content="Sprawdź ceny usług naprawy, optymalizacji i składania komputerów w freshtech.">
-<meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.png">
-<meta property="og:url" content="https://adrianoss124.github.io/freshservice/cennik/cennik.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cennik usług freshtech">
-<meta name="twitter:description" content="Sprawdź ceny usług naprawy, optymalizacji i składania komputerów w freshtech.">
-<meta name="twitter:image" content="https://adrianoss124.github.io/freshservice/img/logo.png">
-<script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cennik</title>
-<meta name="description" content="Poznaj ceny usług freshtech – instalacja Windows, optymalizacja, czyszczenie i więcej.">
-<meta name="keywords" content="Cennik naprawy i optymalizacji komputerów w Starym Ratowie.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Cennik usług - freshtech</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-            <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="manifest" href="/freshservice/manifest.json">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-<link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -44,75 +22,318 @@
                 <a href="../faq.html" class="nav-link">FAQ</a>
                 <a href="../contact.html" class="nav-link">Kontakt</a>
             </nav>
-            <!-- Hamburger Menu Button -->
             <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
             </button>
         </div>
     </header>
-    <!-- Dodany overlay dla menu mobilnego -->
+    
     <div class="menu-overlay"></div>
+    
     <section class="pricing-section">
         <div class="pricing-container">
-            <h2 class="section-title">Cennik Usług freshtech</h2>
-            <p>Ceny są kwotami brutto. Szczegóły płatności w <a href="../terms.html">Regulaminie</a>.</p>
-            <div class="table-wrapper">
+            <div class="pricing-header">
+                <h1>cennik - freshtech</h1>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>6-miesięczna gwarancja</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-truck"></i>
+                        <span>Darmowy odbiór w promieniu 20km</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-container">
                 <table class="pricing-table">
                     <thead>
                         <tr>
                             <th>Usługa</th>
-                            <th>Cena</th>
-                            <th>Szczegóły</th>
+                            <th class="price-col">Cena podstawowa</th>
+                            <th class="time-col">Czas realizacji</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Instalacja systemu Windows</td>
-                            <td>100 PLN</td>
-                            <td>+ instalacja sterowników i podstawowego oprogramowania</td>
+                        <tr data-category="basic" class="popular">
+                            <td>
+                                <div class="service-name">Diagnostyka komputerowa</div>
+                                <div class="service-desc">Kompleksowa analiza problemu</div>
+                                <div class="popular-tag">Najczęściej wybierana</div>
+                            </td>
+                            <td class="price">50 zł</td>
+                            <td>24-48h</td>
                         </tr>
-                        <tr>
-                            <td>Optymalizacja systemu</td>
-                            <td>50-150 PLN</td>
-                            <td>Dostosowana do potrzeb klienta</td>
+                        
+                        <tr data-category="basic">
+                            <td>
+                                <div class="service-name">Instalacja systemu Windows</div>
+                                <div class="service-desc">+ sterowniki + aktualizacje</div>
+                            </td>
+                            <td class="price">120 zł</td>
+                            <td>1 dzień</td>
                         </tr>
-                        <tr>
-                            <td>Wymiana podzespołu</td>
-                            <td>20 PLN + koszt części</td>
-                            <td>Profesjonalny montaż gwarancyjny</td>
+                        
+                        <tr data-category="basic">
+                            <td>
+                                <div class="service-name">Usuwanie wirusów</div>
+                                <div class="service-desc">+ optymalizacja systemu</div>
+                            </td>
+                            <td class="price">90 zł</td>
+                            <td>1-2 dni</td>
                         </tr>
-                        <tr>
-                            <td>Złożenie komputera</td>
-                            <td>100 PLN</td>
-                            <td>Z części dostarczonych przez klienta</td>
+                        
+                        <tr data-category="basic">
+                            <td>
+                                <div class="service-name">Czyszczenie sprzętu</div>
+                                <div class="service-desc">+ wymiana pasty termoprzewodzącej</div>
+                            </td>
+                            <td class="price">110 zł</td>
+                            <td>1 dzień</td>
                         </tr>
-                        <tr>
-                            <td>Usuwanie wirusów</td>
-                            <td>30 PLN</td>
-                            <td>Kompleksowa dezynfekcja systemu</td>
+                        
+                        <tr data-category="advanced">
+                            <td>
+                                <div class="service-name">Odzyskiwanie danych</div>
+                                <div class="service-desc">z dysków uszkodzonych mechanicznie</div>
+                            </td>
+                            <td class="price">od 300 zł</td>
+                            <td>3-5 dni</td>
                         </tr>
-                        <tr>
-                            <td>Czyszczenie sprzętu</td>
-                            <td>80 PLN</td>
-                            <td>Z wymianą past termoprzewodzących</td>
+                        
+                        <tr data-category="business">
+                            <td>
+                                <div class="service-name">Pakiet firmowy BASIC</div>
+                                <div class="service-desc">5 komputerów / miesięczna obsługa</div>
+                            </td>
+                            <td class="price">400 zł/mc</td>
+                            <td>Stała opieka</td>
                         </tr>
-                        <tr class="note-row">
-                            <td colspan="3">* Ceny końcowe mogą różnić się w zależności od stopnia skomplikowania usługi</td>
+                        
+                        <tr data-category="business" class="popular">
+                            <td>
+                                <div class="service-name">Pakiet firmowy PRO</div>
+                                <div class="service-desc">10 komputerów + serwer / priorytetowa obsługa</div>
+                                <div class="popular-tag">Polecany dla firm</div>
+                            </td>
+                            <td class="price">700 zł/mc</td>
+                            <td>Stała opieka 24/7</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="pricing-disclaimer">
+                <p><i class="fas fa-info-circle"></i> Ceny zawierają podatek VAT. Ostateczna wycena może zależeć od modelu sprzętu i stopnia skomplikowania usługi.</p>
+            </div>
+            
+            <!-- Sekcja "Dlaczego możesz nam zaufać?" -->
+            <div class="trust-section">
+                <h2 class="section-title"><i class="fas fa-handshake"></i> Dlaczego możesz nam zaufać?</h2>
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Pełna przejrzystość</h3>
+                        <p>Przed naprawą przedstawiamy szczegółową wycenę i nie wykonujemy żadnych prac bez Twojej zgody.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Ekspercka wiedza</h3>
+                        <p>Nasz zespół to certyfikowani specjaliści z wieloletnim doświadczeniem w branży IT.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Bezpieczeństwo danych</h3>
+                        <p>Stosujemy najwyższe standardy ochrony danych. Twoje pliki są bezpieczne w naszych rękach.</p>
+                    </div>
+                    
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Szybka realizacja</h3>
+                        <p>75% napraw realizujemy w ciągu 24 godzin. Pilne zlecenia mają najwyższy priorytet.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sekcja pakietów -->
+            <div class="value-bundles">
+                <h2><i class="fas fa-gift"></i> Oszczędzaj z pakietami usług</h2>
+                <p class="section-subtitle">Kompleksowe rozwiązania w atrakcyjnych cenach</p>
+                
+                <div class="bundles-container">
+                    <div class="bundle-card">
+                        <h3>Pakiet Optymalizacja</h3>
+                        <ul>
+                            <li>Diagnostyka kompletna</li>
+                            <li>Czyszczenie sprzętu</li>
+                            <li>Optymalizacja systemu</li>
+                            <li>Instalacja zabezpieczeń</li>
+                        </ul>
+                        <div class="bundle-price">
+                            <span class="old-price">370 zł</span>
+                            <span class="new-price">299 zł</span>
+                        </div>
+                        <button class="bundle-btn">Wybierz pakiet</button>
+                    </div>
+                    
+                    <div class="bundle-card highlighted">
+                        <div class="bundle-badge">Najlepsza oferta</div>
+                        <h3>Pakiet Kompleksowy</h3>
+                        <ul>
+                            <li>Diagnostyka kompletna</li>
+                            <li>Czyszczenie sprzętu</li>
+                            <li>Instalacja systemu Windows</li>
+                            <li>Ochrona antywirusowa</li>
+                        </ul>
+                        <div class="bundle-price">
+                            <span class="old-price">450 zł</span>
+                            <span class="new-price">379 zł</span>
+                        </div>
+                        <button class="bundle-btn">Wybierz pakiet</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+                
+                <!-- Porównanie pakietów -->
+                <div class="bundle-comparison">
+                    <h3><i class="fas fa-exchange-alt"></i> Porównanie pakietów</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Usługa</th>
+                                <th>Optymalizacja</th>
+                                <th>Firmowy</th>
+                                <th>Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diagnostyka kompletna</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Czyszczenie sprzętu</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Optymalizacja systemu</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Instalacja zabezpieczeń</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Miesięczne wsparcie IT</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Wsparcie zdalne 24/7</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Odzyskiwanie danych</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Wymiana komponentów</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Gwarancja</td>
+                                <td>6 miesięcy</td>
+                                <td>12 miesięcy</td>
+                                <td>24 miesiące</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../img/logo.png" alt="Freshtech" class="footer-logo" loading="lazy">
+                <p>Profesjonalne usługi komputerowe w Łomży i okolicach. Naprawiamy z pasją od 2024 roku.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/freshtech__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Usługi</h4>
+                <ul>
+                    <li><a href="../cennik/cennik.html">Naprawa komputerów</a></li>
+                    <li><a href="../cennik/cennik.html">Naprawa laptopów</a></li>
+                    <li><a href="../cennik/cennik.html">Odzyskiwanie danych</a></li>
+                    <li><a href="../cennik/cennik.html">Usuwanie wirusów</a></li>
+                    <li><a href="../cennik/cennik.html">Konfiguracja sieci</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Firma</h4>
+                <ul>
+                    <li><a href="../onas/onas.html">O nas</a></li>
+                    <li><a href="../reviews.html">Opinie</a></li>
+                    <li><a href="../projekt/uslugi.html">Realizacje</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Stare Ratowo 9a, 18-411 Śniadowo</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+48790780003">790 780 003</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></li>
+                    <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-18:00, Sob: 9:00-14:00</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszystkie prawa zastrzeżone.</p>
             <p><a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
-            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank"><i class="fab fa-instagram"></i></a></p>
         </div>
     </footer>
-    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
-    <script src="/hamburger.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>

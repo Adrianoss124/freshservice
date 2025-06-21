@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <meta name="description" content="Kontakt z freshtech – serwis komputerowy w Starym Ratowie, Łomża, Kolno, Ostrołęka. Tel: 790 780 003.">
+    <title>Kontakt - freshtech</title>
+    <meta name="description" content="Kontakt z freshtech – profesjonalny serwis komputerowy w Starym Ratowie, Łomża, Kolno, Ostrołęka. Tel: 790 780 003.">
     <meta name="keywords" content="kontakt freshtech, serwis komputerowy Stare Ratowo, naprawa PC Łomża, freshtech Ostrołęka">
     <link rel="canonical" href="https://adrianoss124.github.io/freshservice/contact.html">
+    
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Kontakt – freshtech Stare Ratowo">
-    <meta property="og:description" content="Skontaktuj się z freshtech – serwis komputerowy w Starym Ratowie i okolicach.">
+    <meta property="og:description" content="Skontaktuj się z freshtech – profesjonalnym serwisem komputerowym w Starym Ratowie i okolicach.">
     <meta property="og:image" content="https://adrianoss124.github.io/freshservice/img/logo.webp">
     <meta property="og:url" content="https://adrianoss124.github.io/freshservice/contact.html">
     <meta property="og:type" content="website">
-            <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "freshtech – Adrian Krajewski",
+        "image": "https://adrianoss124.github.io/freshservice/img/logo.webp",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Stare Ratowo 9a",
@@ -33,20 +35,28 @@
         },
         "telephone": "+48790780003",
         "email": "akrajewski2929@gmail.com",
-        "openingHours": "Mo-Fr 09:00-17:00"
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "url": "https://adrianoss124.github.io/freshservice/contact.html"
     }
     </script>
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="contact.css" as="style">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
-    <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="nav-container">
-            <a href="index.html"><img src="img/logo.png" alt="freshtech Logo" class="logo-png"></a>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="freshtech Logo" class="logo-png" width="200" height="40">
+            </a>
             <nav class="nav-links" id="nav-links">
                 <a href="zlec/zlec.html" class="nav-link">Zleć naprawę</a>
                 <a href="cennik/cennik.html" class="nav-link">Cennik</a>
@@ -56,36 +66,375 @@
                 <a href="faq.html" class="nav-link">FAQ</a>
                 <a href="contact.html" class="nav-link active">Kontakt</a>
             </nav>
-            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
             </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu Overlay -->
     <div class="menu-overlay"></div>
-    <main class="container">
-        <h1>Kontakt z freshtech</h1>
-        <p>Masz pytania? Skontaktuj się z nami.</p>
-        <section>
-            <h2>Dane kontaktowe</h2>
-            <p><strong>Adrian Krajewski</strong><br>
-               Stare Ratowo 9a, 18-411 Śniadowo<br>
-               Tel: <a href="tel:+48790780003">790 780 003</a><br>
-               Email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a><br>
-               Godziny pracy: Pon-Pt 9:00-17:00</p>
-        </section>
-        <section>
-            <h2>Mapa dojazdu</h2>
-            <div class="embed-map-fixed"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Stare%20Ratowo%209a&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki retake</a></div><style>.embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}.embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}.embed-map-frame{width:600px!important;height:400px!important;}</style></div>        <p>Zleć naprawę już teraz w <a href="zlec/zlec.html">formularzu</a>.</p>
-    </main>
+    
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Skontaktuj się z nami</h1>
+                <p>Masz pytania lub potrzebujesz pomocy? Jesteśmy do Twojej dyspozycji. Skontaktuj się z naszym serwisem komputerowym w dogodny dla Ciebie sposób.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Dane kontaktowe</h2>
+            <p class="section-subtitle">Jesteśmy dostępni w różnych kanałach komunikacji. Wybierz najwygodniejszą dla siebie formę kontaktu.</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adres</h3>
+                    <p>Stare Ratowo 9a<br>18-411 Śniadowo</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <p><a href="tel:+48790780003">790 780 003</a></p>
+                    <p>Godziny: Pon-Pt 8:00-18:00</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
+                    <p>Odpowiadamy w ciągu 24h</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p><a href="https://facebook.com">Facebook</a></p>
+                    <p><a href="https://instagram.com">Instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="form-container">
+            <div class="form-content">
+                <h2 class="section-title">Wyślij wiadomość</h2>
+                <p>Masz pytanie dotyczące naszych usług? Chcesz umówić się na wizytę? Skorzystaj z formularza kontaktowego, a nasz zespół odpowie najszybciej jak to możliwe.</p>
+                <p>Zwykle odpowiadamy w ciągu kilku godzin w dni robocze. W przypadku pilnych spraw, zalecamy kontakt telefoniczny.</p>
+            </div>
+            
+            <!-- Zmodyfikowany formularz -->
+            <form class="contact-form" 
+                  action="https://formspree.io/f/xeoeznya" 
+                  method="POST"
+                  id="contactForm">
+                
+                <!-- Dodane ukryte pola dla Formspree -->
+                <input type="hidden" name="_language" value="pl">
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <div class="form-group">
+                    <label for="name">Imię i nazwisko</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adres email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Numer telefonu</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Temat</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Wybierz temat</option>
+                        <option value="service">Zapytanie o usługę</option>
+                        <option value="repair">Umówienie naprawy</option>
+                        <option value="quote">Zapytanie o wycenę</option>
+                        <option value="other">Inna sprawa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                
+                <!-- Opcjonalne potwierdzenie wysłania -->
+                <div id="form-confirmation" style="display:none; margin-top:20px;">
+                    <p>✔️ Wiadomość wysłana pomyślnie!</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Dodaj obsługę JavaScript -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        try {
+            // Zmiana tekstu przycisku na "Wysyłanie..."
+            submitBtn.innerHTML = 'Wysyłanie...';
+            submitBtn.disabled = true;
+            
+            // Wysłanie danych do Formspree
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Pokazanie potwierdzenia
+                document.getElementById('form-confirmation').style.display = 'block';
+                // Reset formularza po 2 sekundach
+                setTimeout(() => {
+                    form.reset();
+                    document.getElementById('form-confirmation').style.display = 'none';
+                }, 2000);
+            } else {
+                alert('Wystąpił błąd podczas wysyłania formularza.');
+            }
+        } catch (error) {
+            alert('Błąd połączenia: ' + error.message);
+        } finally {
+            // Przywrócenie przycisku
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
+</script>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Lokalizacja serwisu</h2>
+            <p class="section-subtitle">Znajdź nas w Starym Ratowie. Oferujemy bezpłatny odbiór sprzętu w promieniu 20 km.</p>
+            
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.245532471349!2d21.98950277692674!3d53.24136987243299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471d3a1b3c1f5e1d%3A0x4e3a5c09e9a6b4b8!2sStare%20Ratowo%209a%2C%2018-411%20Stare%20Ratowo!5e0!3m2!1spl!2spl!4v1718800000000!5m2!1spl!2spl" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokalizacja freshtech na mapie">
+                    </iframe>
+                </div>
+                
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="map-info-content">
+                            <h4>Adres</h4>
+                            <p>Stare Ratowo 9a, 18-411 Śniadowo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="map-info-content">
+                            <h4>Godziny otwarcia</h4>
+                            <p>Pon-Pt: 8:00-18:00<br>Sob: 9:00-14:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-info-item">
+                        <div class="map-info-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="map-info-content">
+                            <h4>Parking</h4>
+                            <p>Darmowy parking dla klientów</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Potrzebujesz pilnej pomocy?</h2>
+                <p>Zadzwoń do nas od razu! Nasz zespół jest gotowy, aby pomóc Ci rozwiązać problemy z komputerem.</p>
+                <a href="tel:+48790780003" class="cta-btn">
+                    <i class="fas fa-phone-alt"></i> Zadzwoń: 790 780 003
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
-            <p><a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
-            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Freshtech" class="footer-logo" width="180" height="36">
+                    <p>Profesjonalne usługi komputerowe w Łomży i okolicach. Naprawiamy z pasją od 2024 roku.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/freshtech__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="cennik/cennik.html">Naprawa komputerów</a></li>
+                        <li><a href="cennik/cennik.html">Naprawa laptopów</a></li>
+                        <li><a href="cennik/cennik.html">Odzyskiwanie danych</a></li>
+                        <li><a href="cennik/cennik.html">Usuwanie wirusów</a></li>
+                        <li><a href="cennik/cennik.html">Konfiguracja sieci</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="onas/onas.html">O nas</a></li>
+                        <li><a href="reviews.html">Opinie</a></li>
+                        <li><a href="projekt/uslugi.html">Realizacje</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Stare Ratowo 9a, 18-411 Śniadowo</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+48790780003">790 780 003</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-18:00, Sob: 9:00-14:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszystkie prawa zastrzeżone.</p>
+                <p><a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+            </div>
         </div>
     </footer>
-    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
-    <script src="script.js"></script>
-    <script src="hamburger.js"></script>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Wróć na górę strony">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Proszę wypełnić wszystkie wymagane pola.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Dziękujemy za wiadomość! Skontaktujemy się z Tobą najszybciej jak to możliwe.');
+            contactForm.reset();
+        });
+        
+        // Service worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

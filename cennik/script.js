@@ -33,6 +33,7 @@ class PricingPage {
         this.initAnimations();
         this.initInteractions();
         this.initLazyLoading();
+        this.initBundleComparison();
     }
 
     cacheDom() {
@@ -174,6 +175,27 @@ class PricingPage {
 
             this.pricingRows.forEach(row => observer.observe(row));
         }
+        
+        // Animacja kart zaufania
+        const trustCards = document.querySelectorAll('.trust-card');
+        trustCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        const trustObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        trustCards.forEach(card => {
+            trustObserver.observe(card);
+        });
     }
 
     addParallaxEffect(element) {
@@ -187,8 +209,7 @@ class PricingPage {
     initInteractions() {
         if (this.pricingRows.length > 0) {
             this.pricingRows.forEach(row => {
-                if (!row.classList.contains('note-row')) { // Pomijamy wiersz z notatką
-                    // Efekt dotyku na urządzeniach mobilnych
+                if (!row.classList.contains('note-row')) {
                     row.addEventListener('touchstart', () => {
                         row.classList.add(this.classes.touchHover);
                     });
@@ -196,7 +217,6 @@ class PricingPage {
                         setTimeout(() => row.classList.remove(this.classes.touchHover), 100);
                     });
 
-                    // Efekt hover dla myszy
                     row.addEventListener('mouseenter', () => {
                         row.style.transition = 'background 0.3s ease';
                     });
@@ -207,8 +227,33 @@ class PricingPage {
             });
         }
     }
+    
+    // Porównanie pakietów
+    initBundleComparison() {
+        const comparisonTable = document.querySelector('.comparison-table');
+        if (!comparisonTable) return;
+        
+        comparisonTable.addEventListener('mouseover', (e) => {
+            if (e.target.tagName === 'TD') {
+                const row = e.target.parentElement;
+                const rows = comparisonTable.querySelectorAll('tr');
+                const index = Array.from(row.parentElement.children).indexOf(row);
+                
+                rows.forEach(r => {
+                    if (r !== row) {
+                        r.style.opacity = '0.6';
+                    }
+                });
+            }
+        });
+        
+        comparisonTable.addEventListener('mouseout', () => {
+            const rows = comparisonTable.querySelectorAll('tr');
+            rows.forEach(r => r.style.opacity = '1');
+        });
+    }
 
-    // Lazy loading dla obrazów (opcjonalne)
+    // Lazy loading dla obrazów
     initLazyLoading() {
         const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -233,37 +278,187 @@ class PricingPage {
 // Inicjalizacja po załadowaniu DOM
 document.addEventListener('DOMContentLoaded', () => {
     new PricingPage();
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const rows = Array.from(document.querySelectorAll('.pricing-table tbody tr:not(.note-row)'));
-    const sortPriceBtn = document.getElementById('sortPrice');
-    const filterCheapBtn = document.getElementById('filterCheap');
-    const resetBtn = document.getElementById('resetFilter');
-    const tbody = document.querySelector('.pricing-table tbody');
-
-    sortPriceBtn.addEventListener('click', () => {
-        const sortedRows = rows.sort((a, b) => {
-            const priceA = parsePrice(a.cells[1].textContent);
-            const priceB = parsePrice(b.cells[1].textContent);
-            return priceA - priceB;
+    
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const serviceRows = document.querySelectorAll('.pricing-table tbody tr');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active');
+            
+            const category = btn.dataset.category;
+            
+            // Show/hide rows based on category
+            serviceRows.forEach(row => {
+                if (category === 'all' || row.dataset.category === category) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
         });
-        tbody.innerHTML = '';
-        sortedRows.forEach(row => tbody.appendChild(row));
-        appendNoteRow();
     });
-    resetBtn.addEventListener('click', () => {
-        tbody.innerHTML = '';
-        rows.forEach(row => tbody.appendChild(row));
-        appendNoteRow();
+    
+    // Service selection buttons
+    const selectBtns = document.querySelectorAll('.select-btn');
+    selectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const serviceName = btn.closest('tr').querySelector('.service-name').textContent;
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'service-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>Wybrano: ${serviceName}</h3>
+                    <p>Przejdziemy teraz do formularza zgłoszeniowego, gdzie będziesz mógł dodać szczegóły swojej usługi</p>
+                    <div class="modal-actions">
+                        <button class="modal-btn cancel">Anuluj</button>
+                        <button class="modal-btn confirm">Kontynuuj</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Add event listeners to modal buttons
+            modal.querySelector('.cancel').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            modal.querySelector('.confirm').addEventListener('click', () => {
+                window.location.href = '../zlec/zlec.html';
+            });
+        });
     });
-
-    function parsePrice(priceText) {
-        const match = priceText.match(/(\d+)/);
-        return match ? parseInt(match[0]) : Infinity;
-    }
-
-    function appendNoteRow() {
-        const noteRow = document.querySelector('.note-row');
-        if (noteRow) tbody.appendChild(noteRow);
-    }
+    
+    // Bundle selection buttons
+    const bundleBtns = document.querySelectorAll('.bundle-btn');
+    bundleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const bundleName = btn.closest('.bundle-card').querySelector('h3').textContent;
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'service-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>Wybrano pakiet: ${bundleName}</h3>
+                    <p>To doskonały wybór! Przejdziemy teraz do formularza, gdzie potwierdzimy szczegóły Twojego pakietu.</p>
+                    <div class="modal-actions">
+                        <button class="modal-btn cancel">Anuluj</button>
+                        <button class="modal-btn confirm">Kontynuuj</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Add event listeners to modal buttons
+            modal.querySelector('.cancel').addEventListener('click', () => {
+                modal.remove();
+            });
+            
+            modal.querySelector('.confirm').addEventListener('click', () => {
+                window.location.href = '../zlec/zlec.html?package=' + encodeURIComponent(bundleName);
+            });
+        });
+    });
+    
+    // Consultation button
+    document.querySelector('.consultation-btn').addEventListener('click', () => {
+        window.location.href = '../contact.html';
+    });
+    
+    // Highlight popular/recommended services on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('highlighted');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.popular, .recommended').forEach(el => {
+        observer.observe(el);
+    });
 });
+
+// Service modal styling
+const style = document.createElement('style');
+style.textContent = `
+.service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(223,41,25,0.3);
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.modal-content p {
+    color: #aaa;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn.cancel {
+    background: rgba(255,255,255,0.1);
+    color: #aaa;
+}
+
+.modal-btn.cancel:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.modal-btn.confirm {
+    background: var(--primary);
+    color: white;
+}
+
+.modal-btn.confirm:hover {
+    background: #c22417;
+}
+`;
+document.head.appendChild(style);
