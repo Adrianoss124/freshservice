@@ -197,13 +197,38 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
     <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1PK6BMVN9X');
+</script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-1PK6BMVN9X');
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace YOUR_PIXEL_ID with actual pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <div class="menu-overlay"></div>
@@ -218,6 +243,8 @@
                 <a href="reviews.html" class="nav-link">Opinie</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
                 <a href="blog/blox.html" class="nav-link">Blog</a>
+                <a href="odzyskiwanie-uslug.html" class="nav-link">Odzyskiwanie Usług</a>
+                <a href="plan-marketingowy.html" class="nav-link">Plan Marketingowy</a>
                 <a href="contact.html" class="nav-link">Kontakt</a>
             </nav>
             <!-- Hamburger Menu Button -->
@@ -311,7 +338,27 @@
                 <p>Sprawdź nasze <a href="onas/onas.html" title="O firmie FreshTech">o nas</a>, <a href="reviews.html" title="Opinie klientów o naprawach PC">opinie klientów</a> lub <a href="faq.html" title="Najczęściej zadawane pytania o serwis komputerowy">FAQ</a>. FreshTech – najlepszy serwis PC w regionie.</p>
             </section>
         </section>
+        <section class="cause-marketing">
+            <h2>Nasze Działania na Rzecz Środowiska</h2>
+            <p>W FreshTech dbamy o planetę. Za każdą naprawę przekazujemy część środków na recykling e-waste. Pomagamy zmniejszać ilość odpadów elektronicznych poprzez edukację i zrównoważone praktyki.</p>
+            <a href="plan-marketingowy.html" class="btn">Więcej o naszych inicjatywach</a>
+        </section>
+        <section class="partnerships">
+            <h2>Nasi Partnerzy</h2>
+            <p>Współpracujemy z lokalnymi firmami w Śniadowie i okolicy, oferując wspólne promocje i rabaty. Dołącz do naszej sieci partnerów dla lepszych usług IT.</p>
+            <a href="contact.html" class="btn">Skontaktuj się z nami</a>
+        </section>
     </main>
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Zapisz się do newslettera</h2>
+            <p>Otrzymuj najnowsze porady naprawcze, promocje i aktualności z FreshTech.</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" name="email" placeholder="Twój adres email" required>
+                <button type="submit" class="btn">Zapisz się</button>
+            </form>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank" title="Lokalizacja serwisu komputerowego FreshTech">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003" title="Zadzwoń do FreshTech">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com" title="Email do serwisu PC">akrajewski2929@gmail.com</a></p>
@@ -334,6 +381,7 @@
   </div>
     <script src="script.js"></script>
     <script src="hamburger.js"></script>
+    <script src="lazy-load.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

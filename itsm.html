@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSM w FreshTech - Zarządzanie Usługami IT według ITIL</title>
+    <meta name="description" content="System zarządzania usługami IT w FreshTech - implementacja ITIL, procesy ITSM, zarządzanie incydentami, problemami i zmianami.">
+    <meta name="keywords" content="ITSM FreshTech, ITIL w serwisie komputerowym, zarządzanie usługami IT, procesy ITSM, zarządzanie incydentami IT">
+    <meta name="author" content="FreshTech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adrianoss124.github.io/freshservice/itsm.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ITSM w FreshTech - Zarządzanie Usługami IT według ITIL",
+        "description": "System zarządzania usługami IT w FreshTech - implementacja ITIL, procesy ITSM, zarządzanie incydentami, problemami i zmianami",
+        "author": {
+            "@type": "Organization",
+            "name": "FreshTech"
+        },
+        "datePublished": "2025-12-30",
+        "publisher": {
+            "@type": "Organization",
+            "name": "FreshTech",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://adrianoss124.github.io/freshservice/img/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html"><img src="img/logo.png" alt="FreshTech Logo" class="logo-png"></a>
+            <nav class="nav-links" id="nav-links">
+                <a href="zlec/zlec.html" class="nav-link">Zleć naprawę</a>
+                <a href="cennik/cennik.html" class="nav-link">Cennik</a>
+                <a href="projekt/uslugi.html" class="nav-link">Projekty</a>
+                <a href="onas/onas.html" class="nav-link">O nas</a>
+                <a href="reviews.html" class="nav-link">Opinie</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="blog/blox.html" class="nav-link">Blog</a>
+                <a href="odzyskiwanie-uslug.html" class="nav-link">Odzyskiwanie Usług</a>
+                <a href="plan-marketingowy.html" class="nav-link">Plan Marketingowy</a>
+                <a href="swot.html" class="nav-link">Analiza SWOT</a>
+                <a href="konkurencja.html" class="nav-link">Analiza Konkurencji</a>
+                <a href="grupa-docelowa.html" class="nav-link">Grupa Docelowa</a>
+                <a href="plan-finansowy.html" class="nav-link">Plan Finansowy</a>
+                <a href="itsm.html" class="nav-link">ITSM</a>
+                <a href="contact.html" class="nav-link">Kontakt</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-inner"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="itsm-overview">
+            <div class="container">
+                <h1>ITSM w FreshTech</h1>
+                <p class="subtitle">Zarządzanie usługami IT według najlepszych praktyk ITIL</p>
+                
+                <div class="itsm-intro">
+                    <h2>Czym jest ITSM?</h2>
+                    <p>ITSM (IT Service Management) to podejście do zarządzania usługami IT, które skupia się na dostarczaniu wartości dla klientów poprzez efektywne i efektywne zarządzanie usługami. W FreshTech implementujemy najlepsze praktyki ITIL (Information Technology Infrastructure Library) w celu zapewnienia najwyższej jakości usług napraw komputerowych.</p>
+                </div>
+
+                <div class="itsm-benefits">
+                    <h2>Korzyści z ITSM</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-box">
+                            <i class="fas fa-star"></i>
+                            <h3>Zwiększona Jakość Usług</h3>
+                            <p>Systematyczne podejście do zarządzania usługami zapewnia stałą jakość i spełnienie oczekiwań klientów.</p>
+                        </div>
+                        <div class="benefit-box">
+                            <i class="fas fa-clock"></i>
+                            <h3>Skrócenie Czasu Przestojów</h3>
+                            <p>Szybka diagnoza i naprawa problemów minimalizuje czas przestoju sprzętu klientów.</p>
+                        </div>
+                        <div class="benefit-box">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Lepsza Efektywność</h3>
+                            <p>Optymalizacja procesów prowadzi do zmniejszenia kosztów i zwiększenia produktywności zespołu.</p>
+                        </div>
+                        <div class="benefit-box">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Zwiększona Satysfakcja Klientów</h3>
+                            <p>Profesjonalne podejście i transparentność procesów budują zaufanie i lojalność klientów.</p>
+                        </div>
+                        <div class="benefit-box">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Zwiększony Kontrola Ryzyka</h3>
+                            <p>Systematyczne zarządzanie zmianami i problemami minimalizuje ryzyko awarii.</p>
+                        </div>
+                        <div class="benefit-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Ciągłe Ulepszanie</h3>
+                            <p>Systematyczne monitorowanie i analiza procesów prowadzi do ciągłego doskonalenia usług.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="itsm-framework">
+            <div class="container">
+                <h2>Framework ITIL w FreshTech</h2>
+                
+                <div class="framework-grid">
+                    <div class="framework-box">
+                        <div class="framework-header">
+                            <i class="fas fa-search"></i>
+                            <h3>Strategia Usług</h3>
+                        </div>
+                        <div class="framework-content">
+                            <h4>Cel:</h4>
+                            <p>Określenie wartości usług dla klientów i zdefiniowanie strategii ich dostarczania.</p>
+                            <h4>Procesy w FreshTech:</h4>
+                            <ul>
+                                <li>Definiowanie oferty usług</li>
+                                <li>Analiza rynku i konkurencji</li>
+                                <li>Planowanie finansowe</li>
+                                <li>Zarządzanie portfelem usług</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="framework-box">
+                        <div class="framework-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Projekt Usług</h3>
+                        </div>
+                        <div class="framework-content">
+                            <h4>Cel:</h4>
+                            <p>Projektowanie nowych usług i modyfikacja istniejących zgodnie z wymaganiami klientów.</p>
+                            <h4>Procesy w FreshTech:</h4>
+                            <ul>
+                                <li>Projektowanie procesów napraw</li>
+                                <li>Definiowanie standardów jakości</li>
+                                <li>Projektowanie procedur diagnostycznych</li>
+                                <li>Planowanie wymagań sprzętowych</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="framework-box">
+                        <div class="framework-header">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Przejście Usług</h3>
+                        </div>
+                        <div class="framework-content">
+                            <h4>Cel:</h4>
+                            <p>Zarządzanie wprowadzaniem nowych usług i zmian w istniejących usługach.</p>
+                            <h4>Procesy w FreshTech:</h4>
+                            <ul>
+                                <li>Zarządzanie zmianami</li>
+                                <li>Zarządzanie konfiguracją</li>
+                                <li>Zarządzanie wersjami</li>
+                                <li>Zarządzanie testami</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="framework-box">
+                        <div class="framework-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Operacja Usług</h3>
+                        </div>
+                        <div class="framework-content">
+                            <h4>Cel:</h4>
+                            <p>Dzienna obsługa i utrzymanie usług IT.</p>
+                            <h4>Procesy w FreshTech:</h4>
+                            <ul>
+                                <li>Zarządzanie incydentami</li>
+                                <li>Zarządzanie problemami</li>
+                                <li>Zarządzanie żądaniami</li>
+                                <li>Zarządzanie dostępem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="framework-box">
+                        <div class="framework-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Ciągłe Ulepszanie Usług</h3>
+                        </div>
+                        <div class="framework-content">
+                            <h4>Cel:</h4>
+                            <p>Systematyczne doskonalenie jakości i efektywności usług.</p>
+                            <h4>Procesy w FreshTech:</h4>
+                            <ul>
+                                <li>Monitorowanie jakości usług</li>
+                                <li>Analiza satysfakcji klientów</li>
+                                <li>Identyfikacja obszarów do poprawy</li>
+                                <li>Wdrażanie ulepszeń</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-processes">
+            <div class="container">
+                <h2>Kluczowe Procesy ITSM w FreshTech</h2>
+
+                <div class="process-section">
+                    <h3>1. Zarządzanie Incydentami</h3>
+                    <div class="process-content">
+                        <p><strong>Cel:</strong> Przywrócenie normalnej pracy usługi jak najszybciej i minimalizacja negatywnego wpływu na działalność klienta.</p>
+                        
+                        <div class="process-steps">
+                            <h4>Kroki Procesu:</h4>
+                            <div class="steps-grid">
+                                <div class="step-box">
+                                    <div class="step-number">1</div>
+                                    <h5>Rejestracja</h5>
+                                    <p>Klient zgłasza problem telefonicznie lub przez formularz online.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">2</div>
+                                    <h5>Klasyfikacja</h5>
+                                    <p>Incydent jest klasyfikowany według typu, priorytetu i kategorii.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">3</div>
+                                    <h5>Przydział</h5>
+                                    <p>Incydent jest przydzielany odpowiedniemu technikowi.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">4</div>
+                                    <h5>Diagnoza</h5>
+                                    <p>Technik diagnozuje problem i proponuje rozwiązanie.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">5</div>
+                                    <h5>Rozwiązanie</h5>
+                                    <p>Problem jest rozwiązywany, a klient informowany o wyniku.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">6</div>
+                                    <h5>Zamknięcie</h5>
+                                    <p>Incydent jest zamknięty po potwierdzeniu przez klienta.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="priority-matrix">
+                            <h4>Macierz Priorytetów:</h4>
+                            <table class="priority-table">
+                                <thead>
+                                    <tr>
+                                        <th>Priorytet</th>
+                                        <th>Opis</th>
+                                        <th>Max. Czas Reakcji</th>
+                                        <th>Max. Czas Rozwiązania</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="priority critical">Krytyczny</span></td>
+                                        <td>Pełna utrata usługi, brak możliwości pracy</td>
+                                        <td>30 minut</td>
+                                        <td>4 godziny</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="priority high">Wysoki</span></td>
+                                        <td>Częściowa utrata usługi, znaczne utrudnienia</td>
+                                        <td>1 godzina</td>
+                                        <td>1 dzień roboczy</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="priority medium">Średni</span></td>
+                                        <td>Niewielkie utrudnienia, możliwość pracy</td>
+                                        <td>4 godziny</td>
+                                        <td>3 dni robocze</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="priority low">Niski</span></td>
+                                        <td>Małe niedogodności, brak wpływu na pracę</td>
+                                        <td>1 dzień</td>
+                                        <td>1 tydzień</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>2. Zarządzanie Problemami</h3>
+                    <div class="process-content">
+                        <p><strong>Cel:</strong> Znalezienie i usunięcie przyczyn incydentów, aby zapobiec ich ponownemu wystąpieniu.</p>
+                        
+                        <div class="problem-steps">
+                            <h4>Kroki Procesu:</h4>
+                            <div class="steps-grid">
+                                <div class="step-box">
+                                    <div class="step-number">1</div>
+                                    <h5>Identyfikacja</h5>
+                                    <p>Analiza często występujących incydentów.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">2</div>
+                                    <h5>Rejestracja</h5>
+                                    <p>Problem jest rejestrowany w systemie.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">3</div>
+                                    <h5>Analiza</h5>
+                                    <p>Przeprowadzana jest analiza przyczyn.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">4</div>
+                                    <h5>Rozwiązanie</h5>
+                                    <p>Wdrażane są działania zapobiegawcze.</p>
+                                </div>
+                                <div class="step-box">
+                                    <div class="step-number">5</div>
+                                    <h5>Monitorowanie</h5>
+                                    <p>Oceniana jest skuteczność działań.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="problem-examples">
+                            <h4>Przykłady Problemów:</h4>
+                            <ul>
+                                <li>Częste awarie zasilaczy w laptopach marki X</li>
+                                <li>Problemy z systemem Windows po aktualizacjach</li>
+                                <li>Problemy z połączeniem Wi-Fi w biurach</li>
+                                <li>Wirusy w systemach nieposiadających antywirusów</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>3. Zarządzanie Zmianami</h3>
+                    <div class="process-content">
+                        <p><strong>Cel:</strong> Zapewnienie, że zmiany w infrastrukturze IT są wprowadzane w kontrolowany sposób.</p>
+                        
+                        <div class="change-types">
+                            <h4>Rodzaje Zmian:</h4>
+                            <div class="change-grid">
+                                <div class="change-box">
+                                    <h5>Zmiany Standardowe</h5>
+                                    <p>Regularne, niskiego ryzyka (np. wymiana filtrów, aktualizacje oprogramowania)</p>
+                                </div>
+                                <div class="change-box">
+                                    <h5>Zmiany Normalne</h5>
+                                    <p>Wymagające analizy i zatwierdzenia (np. wymiana sprzętu, zmiana konfiguracji)</p>
+                                </div>
+                                <div class="change-box">
+                                    <h5>Zmiany Nagłe</h5>
+                                    <p>Wymagające natychmiastowego wdrożenia (np. awaryjne poprawki bezpieczeństwa)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="change-steps">
+                            <h4>Proces Zmian:</h4>
+                            <ol>
+                                <li>Rejestracja wniosku o zmianę</li>
+                                <li>Analiza wpływu i ryzyka</li>
+                                <li>Zatwierdzenie przez komitet zmian</li>
+                                <li>Planowanie wdrożenia</li>
+                                <li>Testowanie zmiany</li>
+                                <li>Wdrożenie zmiany</li>
+                                <li>Ocena efektów zmiany</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>4. Zarządzanie Konfiguracją</h3>
+                    <div class="process-content">
+                        <p><strong>Cel:</strong> Utrzymanie dokładnej i aktualnej bazy danych o konfiguracjach infrastruktury IT.</p>
+                        
+                        <div class="configuration-items">
+                            <h4>Elementy Konfiguracji (CI):</h4>
+                            <ul>
+                                <li><strong>Sprzęt:</strong> Komputery, laptopy, drukarki, routery</li>
+                                <li><strong>Oprogramowanie:</strong> Systemy operacyjne, aplikacje, sterowniki</li>
+                                <li><strong>Usługi:</strong> Procesy napraw, procedury, dokumentacja</li>
+                                <li><strong>Ludzie:</strong> Klienci, technicy, dostawcy</li>
+                            </ul>
+                        </div>
+
+                        <div class="cmdb-info">
+                            <h4>Baza Danych Konfiguracji (CMDB):</h4>
+                            <p>W FreshTech prowadzimy CMDB zawierającą informacje o:</p>
+                            <ul>
+                                <li>Identyfikatorach sprzętu</li>
+                                <li>Specyfikacjach technicznych</li>
+                                <li>Historii napraw</li>
+                                <li>Związanych ze sobą elementach</li>
+                                <li>Właścicielach i użytkownikach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-and-technology">
+            <div class="container">
+                <h2>Narzędzia i Technologie ITSM</h2>
+                
+                <div class="tools-grid">
+                    <div class="tool-box">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>System Ticketów</h3>
+                        <p>System do zarządzania zgłoszeniami klientów, umożliwiający śledzenie incydentów od zgłoszenia do zamknięcia.</p>
+                        <ul>
+                            <li>Automatyczne przypisywanie zgłoszeń</li>
+                            <li>Monitorowanie czasu reakcji</li>
+                            <li>Raportowanie statystyk</li>
+                            <li>Integracja z pocztą e-mail</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-box">
+                        <i class="fas fa-database"></i>
+                        <h3>CMDB</h3>
+                        <p>Baza danych konfiguracji przechowująca informacje o wszystkich elementach infrastruktury IT.</p>
+                        <ul>
+                            <li>Relacje między elementami</li>
+                            <li>Historia zmian</li>
+                            <li>Analiza wpływu zmian</li>
+                            <li>Monitorowanie aktywów</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-box">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>System Raportowania</h3>
+                        <p>Narzędzia do analizy i raportowania efektywności procesów ITSM.</p>
+                        <ul>
+                            <li>Raporty SLA</li>
+                            <li>Statystyki incydentów</li>
+                            <li>Analiza trendów</li>
+                            <li>Wskaźniki KPI</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Aplikacja Mobilna</h3>
+                        <p>Aplikacja dla klientów umożliwiająca zgłaszanie problemów i śledzenie postępu napraw.</p>
+                        <ul>
+                            <li>Zgłaszanie incydentów</li>
+                            <li>Śledzenie postępu</li>
+                            <li>Komunikacja z technikami</li>
+                            <li>Ocena jakości usług</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="implementation">
+            <div class="container">
+                <h2>Implementacja ITSM w FreshTech</h2>
+                
+                <div class="implementation-phases">
+                    <h3>Fazy Wdrożenia:</h3>
+                    <div class="phases-timeline">
+                        <div class="phase-box">
+                            <div class="phase-number">1</div>
+                            <h4>Analiza i Planowanie</h4>
+                            <p>Ocena obecnego stanu, identyfikacja potrzeb i definicja celów.</p>
+                            <ul>
+                                <li>Analiza procesów</li>
+                                <li>Identyfikacja luk</li>
+                                <li>Definicja wymagań</li>
+                                <li>Plan wdrożenia</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-box">
+                            <div class="phase-number">2</div>
+                            <h4>Wdrożenie Podstaw</h4>
+                            <p>Wprowadzenie podstawowych procesów ITSM.</p>
+                            <ul>
+                                <li>Zarządzanie incydentami</li>
+                                <li>Zarządzanie problemami</li>
+                                <li>System ticketów</li>
+                                <li>Szkolenie zespołu</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-box">
+                            <div class="phase-number">3</div>
+                            <h4>Rozszerzenie Procesów</h4>
+                            <p>Wprowadzenie zaawansowanych procesów.</p>
+                            <ul>
+                                <li>Zarządzanie zmianami</li>
+                                <li>Zarządzanie konfiguracją</li>
+                                <li>System CMDB</li>
+                                <li>Automatyzacja</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-box">
+                            <div class="phase-number">4</div>
+                            <h4>Optymalizacja</h4>
+                            <p>Ciągłe doskonalenie procesów.</p>
+                            <ul>
+                                <li>Analiza efektywności</li>
+                                <li>Wprowadzanie ulepszeń</li>
+                                <li>Monitorowanie KPI</li>
+                                <li>Rozwój zespołu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation-challenges">
+                    <h3>Wyzwania i Rozwiązania:</h3>
+                    <div class="challenges-grid">
+                        <div class="challenge-box">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Odpór Przed Zmianami</h4>
+                            <p><strong>Wyzwanie:</strong> Pracownicy niechętni nowym procesom</p>
+                            <p><strong>Rozwiązanie:</strong> Szkolenia, komunikacja, zaangażowanie zespołu</p>
+                        </div>
+                        <div class="challenge-box">
+                            <h4><i class="fas fa-dollar-sign"></i> Koszty Wdrożenia</h4>
+                            <p><strong>Wyzwanie:</strong> Wysokie koszty narzędzi i szkoleń</p>
+                            <p><strong>Rozwiązanie:</strong> Stopniowe wdrażanie, rozwiązania open-source</p>
+                        </div>
+                        <div class="challenge-box">
+                            <h4><i class="fas fa-chart-line"></i> Brak Doświadczenia</h4>
+                            <p><strong>Wyzwanie:</strong> Brak wiedzy o ITSM w zespole</p>
+                            <p><strong>Rozwiązanie:</strong> Szkolenia, współpraca z ekspertami</p>
+                        </div>
+                        <div class="challenge-box">
+                            <h4><i class="fas fa-cogs"></i> Integracja Systemów</h4>
+                            <p><strong>Wyzwanie:</strong> Trudności z integracją różnych systemów</p>
+                            <p><strong>Rozwiązanie:</strong> Dobre planowanie, wybór kompatybilnych rozwiązań</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kpi-and-metrics">
+            <div class="container">
+                <h2>Wskaźniki KPI i Metryki</h2>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-box">
+                        <h4><i class="fas fa-clock"></i> Czas Reakcji na Incydenty</h4>
+                        <div class="kpi-value">95%</div>
+                        <p>Czas reakcji na incydenty w ciągu 30 minut</p>
+                        <div class="kpi-target">Cel: 95% incydentów</div>
+                    </div>
+                    
+                    <div class="kpi-box">
+                        <h4><i class="fas fa-check-circle"></i> Pierwsze Kontaktowe Rozwiązanie</h4>
+                        <div class="kpi-value">85%</div>
+                        <p>Procent incydentów rozwiązanych przy pierwszym kontakcie</p>
+                        <div class="kpi-target">Cel: 85% incydentów</div>
+                    </div>
+                    
+                    <div class="kpi-box">
+                        <h4><i class="fas fa-star"></i> Satysfakcja Klientów</h4>
+                        <div class="kpi-value">4.5/5</div>
+                        <p>Średnia ocena satysfakcji klientów</p>
+                        <div class="kpi-target">Cel: 4.5 na 5</div>
+                    </div>
+                    
+                    <div class="kpi-box">
+                        <h4><i class="fas fa-repeat"></i> Powtarzające się Incydenty</h4>
+                        <div class="kpi-value">5%</div>
+                        <p>Procent incydentów, które powtarzają się w ciągu 30 dni</p>
+                        <div class="kpi-target">Cel: poniżej 5%</div>
+                    </div>
+                </div>
+
+                <div class="metrics-details">
+                    <h3>Szczegółowe Metryki:</h3>
+                    <div class="metrics-table-container">
+                        <table class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th>Metryka</th>
+                                    <th>Wzór</th>
+                                    <th>Cel</th>
+                                    <th>Obecny Poziom</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Średni Czas Rozwiązania Incydentów</td>
+                                    <td>Suma czasów / Liczba incydentów</td>
+                                    <td>4 godziny</td>
+                                    <td>6 godzin</td>
+                                </tr>
+                                <tr>
+                                    <td>Wskaźnik Zamknięcia Incydentów</td>
+                                    <td>Zamknięte incydenty / Wszystkie incydenty</td>
+                                    <td>98%</td>
+                                    <td>95%</td>
+                                </tr>
+                                <tr>
+                                    <td>Średni Czas Przestojów</td>
+                                    <td>Suma przestojów / Liczba incydentów</td>
+                                    <td>2 godziny</td>
+                                    <td>3.5 godziny</td>
+                                </tr>
+                                <tr>
+                                    <td>Wskaźnik Zadowolenia Klientów</td>
+                                    <td>Średnia ocen z ankiet</td>
+                                    <td>4.5/5</td>
+                                    <td>4.2/5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-plans">
+            <div class="container">
+                <h2>Plany na Przyszłość</h2>
+                
+                <div class="future-grid">
+                    <div class="future-box">
+                        <i class="fas fa-robot"></i>
+                        <h3>Automatyzacja Procesów</h3>
+                        <p>Wprowadzenie automatyzacji w procesach ITSM dla zwiększenia efektywności.</p>
+                        <ul>
+                            <li>Automatyczne przypisywanie zgłoszeń</li>
+                            <li>Chatboty do obsługi klientów</li>
+                            <li>Automatyczne raportowanie</li>
+                            <li>Procesy workflow</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="future-box">
+                        <i class="fas fa-brain"></i>
+                        <h3>Sztuczna Inteligencja</h3>
+                        <p>Wykorzystanie AI do analizy problemów i przewidywania awarii.</p>
+                        <ul>
+                            <li>Analiza trendów incydentów</li>
+                            <li>Przewidywanie awarii sprzętu</li>
+                            <li>Inteligentne diagnozowanie</li>
+                            <li>Personalizacja usług</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="future-box">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Usługi Chmurowe</h3>
+                        <p>Rozwój usług ITSM w chmurze dla większej elastyczności.</p>
+                        <ul>
+                            <li>Chmurowy system ticketów</li>
+                            <li>Integracja z usługami chmurowymi</li>
+                            <li>Zdalne monitorowanie</li>
+                            <li>Skalowalność rozwiązań</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="future-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobilność</h3>
+                        <p>Rozwój aplikacji mobilnych dla lepszej obsługi klientów i zespołu.</p>
+                        <ul>
+                            <li>Aplikacja dla klientów</li>
+                            <li>Aplikacja dla techników</li>
+                            <li>Integracja z systemami GPS</li>
+                            <li>Możliwość zdalnej diagnostyki</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <div class="container">
+                <h2>Podsumowanie</h2>
+                <p>Implementacja ITSM w FreshTech to strategiczny krok w kierunku profesjonalizacji usług IT. Dzięki zastosowaniu najlepszych praktyk ITIL możemy zapewnić naszym klientom najwyższą jakość usług, szybkie reagowanie na problemy i ciągłe doskonalenie naszych procesów.</p>
+                
+                <p>Kluczowe korzyści z ITSM to:</p>
+                <ul>
+                    <li>Zwiększona jakość i spójność usług</li>
+                    <li>Skrócenie czasu przestojów</li>
+                    <li>Lepsza satysfakcja klientów</li>
+                    <li>Zwiększone bezpieczeństwo i kontrola</li>
+                    <li>Ciągłe ulepszanie procesów</li>
+                </ul>
+                
+                <p>W FreshTech stale inwestujemy w rozwój naszych procesów ITSM, aby sprostać rosnącym wymaganiom naszych klientów i rynku IT.</p>
+            </div>
+        </section>
+    </main>
+
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Zapisz się do newslettera</h2>
+            <p>Otrzymuj najnowsze porady naprawcze, promocje i aktualności z FreshTech.</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" name="email" placeholder="Twój adres email" required>
+                <button type="submit" class="btn">Zapisz się</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank" title="Lokalizacja serwisu komputerowego FreshTech">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003" title="Zadzwoń do FreshTech">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com" title="Email do serwisu PC">akrajewski2929@gmail.com</a></p>
+            <p><a href="terms.html" title="Regulamin FreshTech">Regulamin</a> | <a href="privacy.html" title="Polityka Prywatności">Polityka Prywatności</a> | <a href="contact.html" title="Kontakt z serwisem komputerowym">Kontakt</a> | <a href="sitemap.xml" title="Mapa strony FreshTech">Mapa strony</a></p>
+            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" title="Facebook FreshTech" rel="noopener"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank" title="Instagram FreshTech" rel="noopener"><i class="fab fa-instagram"></i></a></p>
+            <p>Słowa kluczowe: ITSM FreshTech, ITIL w serwisie komputerowym, zarządzanie usługami IT, procesy ITSM, zarządzanie incydentami IT.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
+    
+    <script src="script.js"></script>
+    <script src="hamburger.js"></script>
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
