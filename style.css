@@ -1,18 +1,19 @@
 /* Zmienne CSS */
 :root {
     --primary: #df2919;
-    --accent: #2dc6f5;
+    --accent: #c22417;
     --dark-bg: #1a1a1a;
     --light-bg: #f5f5f5;
     --card-bg: #252525;
     --card-bg-light: #ffffff;
     --light-text: #ffffff;
     --dark-text: #333333;
-    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --header-height: 80px;
     --card-gradient: linear-gradient(45deg, #2b2b2b 0%, #1a1a1a 100%);
     --card-gradient-light: linear-gradient(45deg, #e0e0e0 0%, #ffffff 100%);
     --shadow: 0 10px 30px rgba(223, 41, 25, 0.2);
+    --glow: 0 0 20px rgba(223, 41, 25, 0.3);
 }
 
 /* Reset i Globalne */
@@ -29,6 +30,23 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     transition: background var(--transition), color var(--transition);
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(223, 41, 25, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(223, 41, 25, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 body.light {
@@ -56,32 +74,34 @@ body.light .hamburger-inner::after {
 a {
     color: var(--accent);
     text-decoration: none;
+    transition: color var(--transition);
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--primary);
+    text-decoration: none;
 }
 
 /* Nagłówek */
 .header {
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
     top: 0;
     height: var(--header-height);
     z-index: 1000;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
 .logo-png {
@@ -100,33 +120,24 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
-    transition: right var(--transition); /* Dodaj tę linię */
+    gap: 30px;
 }
 
 .nav-link {
-    color: var(--light-text);
-    text-decoration: none;
-    position: relative;
-    padding: 0.5rem 0;
     font-weight: 500;
-    transition: color var(--transition);
-}
-
-body.light .nav-link {
-    color: var(--dark-text);
+    position: relative;
+    padding: 5px 0;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
+    bottom: 0;
+    left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent);
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width var(--transition);
+    background: var(--primary);
+    transition: var(--transition);
 }
 
 .nav-link:hover::after,
@@ -134,12 +145,9 @@ body.light .nav-link {
     width: 100%;
 }
 
-.nav-link:hover {
-    color: var(--accent);
-}
-
+.nav-link:hover,
 .nav-link.active {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .hamburger {
@@ -230,26 +238,48 @@ body.light .theme-toggle {
 /* Sekcja Hero */
 .hero {
     text-align: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(to bottom, var(--primary) 0%, var(--dark-bg) 100%);
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark-bg) 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
     opacity: 0;
     transform: translateY(20px);
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(223, 41, 25, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
 body.light .hero {
-    background: linear-gradient(to bottom, var(--primary) 0%, var(--light-bg) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #f5f5f5 50%, var(--accent) 100%);
 }
 
 .hero.animate {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     font-weight: 700;
+    z-index: 1;
+    position: relative;
 }
 
 .hero h1 span {
@@ -257,46 +287,57 @@ body.light .hero {
 }
 
 .hero p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #eee;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
 }
 
 body.light .hero p {
-    color: #666;
+    color: #555;
 }
 
 .hero .tagline {
     color: var(--accent);
     font-weight: 600;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    position: relative;
 }
 
 .hero-btn {
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    z-index: 1;
+    position: relative;
 }
 
 /* Główna treść */
 main {
-    margin-top: calc(var(--header-height) + 2rem);
-    max-width: 1200px;
+    margin-top: var(--header-height);
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
 }
 
 .services {
+    padding: 100px 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
+.about, .testimonials, .cause-marketing, .partnerships, .newsletter {
+    text-align: center;
+}
+
 .about {
-    padding: 2rem 1rem;      /* zwiększono poziome i pionowe marginesy */
-    margin-top: 2rem;        /* dystans od poprzedniej sekcji */
+    padding: 100px 0;
 }
 .about > section {
     margin-bottom: 2rem;     /* przestrzeń między dwiema podsekcjami */
@@ -305,7 +346,7 @@ main {
     font-size: 1.8rem;      /* zmniejszenie z 2rem */
     margin-bottom: 1rem;    /* przestrzeń pod nagłówkiem */
     font-weight: 600;       /* lżejszy krój, jeśli chcesz */
-    color: var(--accent);   /* opcjonalnie inny kolor dla kontrastu */
+    color: var(--primary);   /* opcjonalnie inny kolor dla kontrastu */
 }
 .about h3 {
     font-size: 1.3rem;      /* zmniejszenie z domyślnego 1.5rem */
@@ -318,24 +359,68 @@ main {
     font-size: 1rem;         /* domyślnie 1rem, ale możesz eksperymentować 0.95rem–1.05rem */
     line-height: 1.6;        /* poprawiona czytelność linii */
     max-width: 800px;        /* ogranicza szerokość tekstu do wygodnej linii */
-    margin-bottom: 1rem;     /* odstęp między akapitami */
+    margin: 0 auto 1rem;     /* odstęp między akapitami, centered */
     color: var(--light-text);/* lub #eee; dla body.light może być #333 */
 }
+/* Testimonials */
+.testimonials {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial cite {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Cause Marketing */
+.cause-marketing {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Partnerships */
+.partnerships {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 100px 0;
+    text-align: center;
+}
+
 /* Karty Usług */
 .card {
-    background: var(--card-gradient);
-    border: 1px solid #333;
-    border-radius: 15px;
+    background: rgba(42, 42, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .card.animate {
@@ -345,8 +430,9 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(223, 41, 25, 0.3);
+    background: rgba(50, 50, 50, 0.9);
 }
 
 .card::before {
@@ -356,13 +442,24 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(223, 41, 25, 0.1) 0%, transparent 100%);
+    background: linear-gradient(45deg, rgba(223, 41, 25, 0.05) 0%, transparent 100%);
     opacity: 0;
-    transition: opacity var(--transition);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .card:hover::before {
     opacity: 1;
+}
+
+body.light .card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+body.light .card:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
 }
 
 .service-icon {
@@ -398,39 +495,38 @@ body.light .content p {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     background: var(--primary);
     color: var(--light-text);
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
+    border-radius: 12px;
+    font-weight: 600;
     font-size: 1rem;
-    transition: background var(--transition), transform var(--transition);
+    transition: all var(--transition);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(223, 41, 25, 0.3);
 }
 
-.btn::after {
+.btn::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.4s ease, height 0.4s ease;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
 }
 
-.btn:hover::after {
-    width: 200%;
-    height: 200%;
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn:hover {
     background: #c22417;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(223, 41, 25, 0.4);
 }
 
 /* Cookie Banner */
@@ -469,32 +565,147 @@ body.light .cookie-banner {
 }
 
 /* Footer */
-body.light .footer {
-    background: var(--card-bg-light);
-    color: var(--dark-text);
-}
 .footer {
-    background: var(--card-bg);
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #aaa;
+    background: #0a0a0a;
+    padding-top: 100px;
+    color: var(--light-text);
 }
 
-body.light .footer {
-    background: var(--card-bg-light);
-    color: #666;
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.footer a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color var(--transition);
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-.footer a:hover {
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: var(--light-text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: var(--light-text);
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-links h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--light-text-secondary);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
     color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-contact ul {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-contact i {
+    color: var(--primary);
+    font-size: 20px;
+    min-width: 24px;
+    margin-top: 5px;
+}
+
+.footer-contact p, .footer-contact a {
+    color: var(--light-text-secondary);
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--light-text-secondary);
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+}
+
+.footer-bottom a {
+    color: var(--accent);
+}
+
+.footer-bottom a:hover {
     text-decoration: underline;
 }
 
@@ -652,6 +863,55 @@ body.light .footer {
 
 .btn:hover {
   opacity: 0.9;
+}
+
+/* Newsletter */
+.newsletter {
+    background: var(--card-gradient);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    border-radius: 15px;
+}
+
+body.light .newsletter {
+    background: var(--card-bg-light);
+}
+
+.newsletter h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+body.light .newsletter p {
+    color: var(--dark-text);
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.5rem;
 }
 
 /* Ukrycie banera, dopóki JS nie zdecyduje inaczej */

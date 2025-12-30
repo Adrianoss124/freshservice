@@ -34,13 +34,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
     <!-- Preload critical resources -->
-    <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="preload" href="img/logo.png" as="image">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//kit.fontawesome.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -191,11 +189,7 @@
     </script>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="/freshservice/img/apple-touch-icon.png">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
-    <script src="https://kit.fontawesome.com/9a5c70655b.js" crossorigin="anonymous" defer></script>
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <!-- Google Analytics -->
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PK6BMVN9X"></script>
@@ -206,12 +200,6 @@
 
   gtag('config', 'G-1PK6BMVN9X');
 </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-1PK6BMVN9X');
-    </script>
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -234,21 +222,20 @@
     <div class="menu-overlay"></div>
     <header class="header">
         <div class="nav-container">
-            <a href="index.html"><img src="img/logo.png" alt="freshtech Logo" class="logo-png"></a>
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="freshtech Logo" class="logo-png" width="200" height="40">
+            </a>
             <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link active">Strona główna</a>
                 <a href="zlec/zlec.html" class="nav-link">Zleć naprawę</a>
                 <a href="cennik/cennik.html" class="nav-link">Cennik</a>
                 <a href="projekt/uslugi.html" class="nav-link">Projekty</a>
                 <a href="onas/onas.html" class="nav-link">O nas</a>
                 <a href="reviews.html" class="nav-link">Opinie</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
-                <a href="blog/blox.html" class="nav-link">Blog</a>
-                <a href="odzyskiwanie-uslug.html" class="nav-link">Odzyskiwanie Usług</a>
-                <a href="plan-marketingowy.html" class="nav-link">Plan Marketingowy</a>
                 <a href="contact.html" class="nav-link">Kontakt</a>
             </nav>
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
             </button>
         </div>
@@ -327,15 +314,21 @@
             </div>
         </section>
         <section class="about">
-            <h1>FreshTech – Profesjonalny Serwis Komputerowy w Śniadowie</h1>
+            <h2>O FreshTech</h2>
+            <p>FreshTech to lokalny serwis komputerowy w Śniadowie, oferujący kompleksowe usługi naprawcze dla komputerów i laptopów. Z pasją do technologii i dbałością o klienta, zapewniamy szybkie i skuteczne rozwiązania problemów IT.</p>
             <section>
-                <h2>Nasze Usługi Napraw Komputerów</h2>
-                <p>FreshTech to Twój lokalny specjalista w naprawie komputerów Śniadowo, optymalizacji systemów PC Łomża, składaniu komputerów Kolno i Ostrołęka. Działamy w Starym Ratowie i okolicach, rozwiązując problemy z wolnym działaniem sprzętu, usuwamy awarie podzespołów, naprawiamy laptopy, optymalizujemy oprogramowanie i budujemy wydajne komputery na zamówienie. Nasze usługi obejmują diagnozę komputerów, serwis PC lokalny, gwarancję na naprawy. <a href="zlec/zlec.html" title="Zleć naprawę komputera online">Zleć naprawę</a> lub sprawdź nasz <a href="cennik/cennik.html" title="Cennik napraw komputerów">cennik</a>.</p>
-            </section>
-            <section>
-                <h2>Dlaczego Wybrać FreshTech Serwis Komputerowy?</h2>
-                <p>Jesteśmy blisko Ciebie – serwis komputerowy Śniadowo, Łomża, Kolno, Ostrołęka. Gwarantujemy szybką diagnozę PC, 30-dniową gwarancję na naprawy komputerów, przystępne ceny i profesjonalną obsługę. Skontaktuj się pod numerem <a href="tel:+48790780003" title="Zadzwoń do serwisu komputerowego">790 780 003</a> lub skorzystaj z <a href="zlec/zlec.html" title="Formularz zgłoszenia naprawy">formularza online</a>.</p>
-                <p>Sprawdź nasze <a href="onas/onas.html" title="O firmie FreshTech">o nas</a>, <a href="reviews.html" title="Opinie klientów o naprawach PC">opinie klientów</a> lub <a href="faq.html" title="Najczęściej zadawane pytania o serwis komputerowy">FAQ</a>. FreshTech – najlepszy serwis PC w regionie.</p>
+                <h3>Nasze Usługi</h3>
+                <p>FreshTech to zaufany lokalny specjalista w naprawie i optymalizacji komputerów w Śniadowie, Łomża, Kolno i Ostrołęka. Oferujemy kompleksowe usługi:</p>
+                <ul>
+                    <li>Diagnoza sprzętu komputerowego</li>
+                    <li>Naprawy laptopów i komputerów stacjonarnych</li>
+                    <li>Optymalizacja systemów operacyjnych</li>
+                    <li>Składanie komputerów na zamówienie</li>
+                    <li>Doradztwo IT i konfiguracja sieci</li>
+                    <li>Usuwanie wirusów i zabezpieczenie przed malware</li>
+                    <li>Odzyskiwanie danych z uszkodzonych dysków</li>
+                </ul>
+                <p>Każda usługa objęta jest 30-dniową gwarancją jakości. <a href="zlec/zlec.html" title="Zleć naprawę komputera online">Zleć naprawę</a> lub sprawdź nasz <a href="cennik/cennik.html" title="Cennik napraw komputerów">cennik</a>.</p>
             </section>
         </section>
         <section class="cause-marketing">
@@ -360,11 +353,55 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank" title="Lokalizacja serwisu komputerowego FreshTech">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003" title="Zadzwoń do FreshTech">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com" title="Email do serwisu PC">akrajewski2929@gmail.com</a></p>
-            <p><a href="terms.html" title="Regulamin FreshTech">Regulamin</a> | <a href="privacy.html" title="Polityka Prywatności">Polityka Prywatności</a> | <a href="contact.html" title="Kontakt z serwisem komputerowym">Kontakt</a> | <a href="sitemap.xml" title="Mapa strony FreshTech">Mapa strony</a></p>
-            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" title="Facebook FreshTech" rel="noopener"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank" title="Instagram FreshTech" rel="noopener"><i class="fab fa-instagram"></i></a></p>
-            <p>Słowa kluczowe: naprawy komputerów Śniadowo, serwis PC Łomża, optymalizacja laptopów Kolno, składanie komputerów Ostrołęka, FreshTech lokalny serwis.</p>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Freshtech" class="footer-logo" width="180" height="36">
+                    <p>Profesjonalne usługi komputerowe w Łomży i okolicach. Naprawiamy z pasją od 2024 roku.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/freshtech__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="cennik/cennik.html">Naprawa komputerów</a></li>
+                        <li><a href="cennik/cennik.html">Naprawa laptopów</a></li>
+                        <li><a href="cennik/cennik.html">Odzyskiwanie danych</a></li>
+                        <li><a href="cennik/cennik.html">Usuwanie wirusów</a></li>
+                        <li><a href="cennik/cennik.html">Konfiguracja sieci</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="onas/onas.html">O nas</a></li>
+                        <li><a href="reviews.html">Opinie</a></li>
+                        <li><a href="projekt/uslugi.html">Realizacje</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Stare Ratowo 9a, 18-411 Śniadowo</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+48790780003">790 780 003</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-18:00, Sob: 9:00-14:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszystkie prawa zastrzeżone.</p>
+                <p><a href="terms.html">Regulamin</a> | <a href="privacy.html">Polityka Prywatności</a> | <a href="contact.html">Kontakt</a></p>
+            </div>
         </div>
     </footer>
     <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>

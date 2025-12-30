@@ -79,8 +79,11 @@
     <div class="menu-overlay"></div>
     <header class="header">
         <div class="nav-container">
-            <a href="../index.html"><img src="../img/logo.png" alt="freshtech Logo" class="logo-png"></a>
+            <a href="../index.html" class="logo-link">
+                <img src="../img/logo.png" alt="freshtech Logo" class="logo-png" width="200" height="40">
+            </a>
             <nav class="nav-links" id="nav-links">
+                <a href="../index.html" class="nav-link">Strona główna</a>
                 <a href="../zlec/zlec.html" class="nav-link">Zleć naprawę</a>
                 <a href="../cennik/cennik.html" class="nav-link">Cennik</a>
                 <a href="../projekt/uslugi.html" class="nav-link">Projekty</a>
@@ -89,12 +92,13 @@
                 <a href="../faq.html" class="nav-link">FAQ</a>
                 <a href="../contact.html" class="nav-link">Kontakt</a>
             </nav>
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger-inner"></span>
             </button>
         </div>
     </header>
+
+    <div class="menu-overlay"></div>
     <main>
         <section class="about-section">
             <div class="about-container">
@@ -144,12 +148,61 @@
         <button id="reject-cookies" class="btn">Odrzuć</button>
     </div>
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. <a href="https://maps.google.com/?q=Stare+Ratowo+9a,+18-411+Śniadowo" target="_blank">Stare Ratowo 9a, 18-411 Śniadowo</a>, tel. <a href="tel:+48790780003">790 780 003</a>, email: <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></p>
-            <p><a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
-            <p>Śledź nas na: <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank"><i class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/freshtech__" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="../img/logo.png" alt="Freshtech" class="footer-logo" width="180" height="36">
+                    <p>Profesjonalne usługi komputerowe w Łomży i okolicach. Naprawiamy z pasją od 2024 roku.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/19gN1pKrs4/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/freshtech__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="../cennik/cennik.html">Naprawa komputerów</a></li>
+                        <li><a href="../cennik/cennik.html">Naprawa laptopów</a></li>
+                        <li><a href="../cennik/cennik.html">Odzyskiwanie danych</a></li>
+                        <li><a href="../cennik/cennik.html">Usuwanie wirusów</a></li>
+                        <li><a href="../cennik/cennik.html">Konfiguracja sieci</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="../onas/onas.html">O nas</a></li>
+                        <li><a href="../reviews.html">Opinie</a></li>
+                        <li><a href="../projekt/uslugi.html">Realizacje</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Stare Ratowo 9a, 18-411 Śniadowo</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+48790780003">790 780 003</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:akrajewski2929@gmail.com">akrajewski2929@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-18:00, Sob: 9:00-14:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adrian Krajewski, działalność nierejestrowana. Wszystkie prawa zastrzeżone.</p>
+                <p><a href="../terms.html">Regulamin</a> | <a href="../privacy.html">Polityka Prywatności</a> | <a href="../contact.html">Kontakt</a></p>
+            </div>
         </div>
     </footer>
+
+    <button id="back-to-top" aria-label="Wróć na górę strony">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <button id="back-to-top" title="Wróć na górę"><i class="fas fa-arrow-up"></i></button>
     <script src="script.js"></script>
 </body>

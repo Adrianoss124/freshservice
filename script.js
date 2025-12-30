@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animacja kart
     if (cards.length > 0) {
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("animate");
+                    setTimeout(() => {
+                        entry.target.classList.add("animate");
+                    }, index * 150);
                     observer.unobserve(entry.target);
                 }
             });
